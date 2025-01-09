@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Inter", serif;
+    src: url("../fonts/Inter.ttf");
+}
+@font-face {
+    font-family: "Figtree", serif;
+    src: url("../fonts/Figtree.ttf");
+}
+@font-face {
+    font-family: "Poppins", serif;
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Poppins", serif;
+    src: url("../fonts/Poppins-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins", serif;
+    src: url("../fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Poppins", serif;
+    src: url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Roboto", serif;
+    src: url("../fonts/Roboto.ttf");
+}
+@font-face {
+    font-family: "Manrope", serif;
+    src: url("../fonts/Manrope.ttf");
+}
+@font-face {
+    font-family: "SF-Pro-Display", serif;
+    src: url("../fonts/SF-Pro-Display-Regular.otf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "SF-Pro-Text", serif;
+    src: url("../fonts/SF-Pro-Text-Semibold.otf");
+    font-weight: 600;
+}
+
+
+
+:root{
+    --max_width:768px;
+
+    --c_primary:#FFCF01;
+    --c_secondary:#242424;
+    --c_dark:#2F2F2F;
+    --c_gray:#5C5E61;
+    --c_danger:#FF3838;
+    --c_white:#ffffff;
+
+    --bg_black:#000000;
+    --bg_dangerLt:#FFD7D7;
+    --bg_white:#ffffff;
+
+    --ff_Inter:"Inter", serif;
+    --ff_Figtree:"Figtree", serif;
+    --ff_Poppins:"Poppins", serif;
+    --ff_Roboto:"Roboto", serif;
+    --ff_SF_Pro_Display:"SF-Pro-Display", serif;
+    --ff_SF_Pro_Text:"SF-Pro-Text", serif;
+
+    --fs_8:8px;
+    --fs_9:9px;
+    --fs_10:10px;
+    --fs_11:11px;
+    --fs_12:12px;
+    --fs_13:13px;
+    --fs_14:14px;
+    --fs_15:15px;
+    --fs_16:16px;
+    --fs_18:18px;
+    --fs_20:20px;
+    --fs_24:24px;
+    --fs_28:28px;
+    --fs_32:32px;
+    --fs_36:36px;
+    --fs_40:40px;
+    --fs_54:54px;
+
+    --p_10:10px; /* p pl*/
+    --p_12:12px; /* p */
+    --p_20:20px; /* p px */
+
+    --m_8:8px; /* mb */
+    --m_10:10px; /* mb */
+    --m_12:12px; /* mb */
+    --m_16:16px; /* mb */
+    --m_18:18px; /* mb */
+    --m_20:20px; /* mb */
+    --m_24:24px; /* mb */
+    --m_48:48px; /* mb */
+
+    --g_6:6px; /* gy */
+    --g_8:8px; /* gy */
+    --g_18:18px; /* gy */
+
+    --rounded_6:6px;
+    --rounded_10:10px;
+}
+body{
+    font-family: var(--ff_Inter);
+    line-height: 1.4;
+    color: var(--c_secondary);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff_Poppins);
+    font-weight: 600;
+}
+.container{
+    max-width: var(--max_width);
+}
+.c_primary{color: var(--c_primary);}
+.c_secondary{color: var(--c_secondary);}
+.c_dark{color: var(--c_dark);}
+.c_gray{color: var(--c_gray);}
+.c_danger{color: var(--c_danger);}
+.c_white{color: var(--c_white);}
+
+.bg_black{background-color: var(--bg_black);}
+.bg_dangerLt{background-color: var(--bg_dangerLt);}
+.bg_white{background-color: var(--bg_white);}
+
+.ff_Inter{font-family: var(--ff_Inter);}
+.ff_Figtree{font-family: var(--ff_Figtree);}
+.ff_Poppins{font-family: var(--ff_Poppins);}
+.ff_Roboto{font-family: var(--ff_Roboto);}
+.ff_SF_Pro_Display{font-family: var(--ff_SF_Pro_Display);}
+.ff_SF_Pro_Text{font-family: var(--ff_SF_Pro_Text);}
+
+.fs_8{font-size: var(--fs_8);}
+.fs_9{font-size: var(--fs_9);}
+.fs_10{font-size: var(--fs_10);}
+.fs_11{font-size: var(--fs_11);}
+.fs_12{font-size: var(--fs_12);}
+.fs_13{font-size: var(--fs_13);}
+.fs_14{font-size: var(--fs_14);}
+.fs_15{font-size: var(--fs_15);}
+.fs_16{font-size: var(--fs_16);}
+.fs_18{font-size: var(--fs_18);}
+.fs_20{font-size: var(--fs_20);}
+.fs_24{font-size: var(--fs_24);}
+.fs_28{font-size: var(--fs_28);}
+.fs_32{font-size: var(--fs_32);}
+.fs_36{font-size: var(--fs_36);}
+.fs_40{font-size: var(--fs_40);}
+.fs_54{font-size: var(--fs_54);}
+
+.p_10{padding: var(--p_10);}
+.p_12{padding: var(--p_12);}
+.p_20{padding: var(--p_20);}
+.pl_10{padding-left: var(--p_10);}
+.px_20{padding-left: var(--p_20);padding-right: var(--p_20);}
+
+.mb_8{margin-bottom: var(--m_8);}
+.mb_10{margin-bottom: var(--m_10);}
+.mb_12{margin-bottom: var(--m_12);}
+.mb_16{margin-bottom: var(--m_16);}
+.mb_18{margin-bottom: var(--m_18);}
+.mb_20{margin-bottom: var(--m_20);}
+.mb_24{margin-bottom: var(--m_24);}
+.mb_48{margin-bottom: var(--m_48);}
+
+.gy_6{}
+
+.rounded_6{border-radius: var(--rounded_6);}
+.rounded_10{border-radius: var(--rounded_10);}
+
+
