@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Register</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <main class="login_main login_bg">
+        <div class="container login_container">
+            <form id="register_form" action="login.html" autocomplete="off">
+                <div class="position-relative min_vh d-flex flex-column">
+                    <div class="flex-grow-1 py-4">
+                        <div class="text-lg-center mb_24">
+                            <img src="assets/img/login/jktgo.png" alt="jktgo" width="68">
+                        </div>
+                        <h2 class="fs_24 mb_18">Create an Account</h2>
+                        <div class="row gy_18">
+                            <div class="col-12">
+                                <div class="inp_item">
+                                    <input class="form-control inp_shadow inp_withIcon inp_fullname" name="fullname" type="text" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="inp_item">
+                                    <input class="form-control inp_shadow inp_withIcon inp_profile" name="username" type="text" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="inp_item">
+                                    <input class="form-control inp_shadow inp_withIcon inp_phone" name="phone" type="tel" placeholder="Phone Number" required="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="inp_item">
+                                    <input class="form-control inp_shadow inp_withIcon inp_email" name="email" type="email" placeholder="Email" required="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="pwd_inpItem">
+                                    <input class="form-control inp_shadow inp_withIcon inp_password" name="password" type="password" placeholder="Password">
+                                    <button class="pwd_tglBtn" type="button"></button>
+                                </div>
+                                <div class="pwd_inpErr"></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="inp_item">
+                                    <div class="form-check">
+                                        <label class="form-check-label fs_12 c_gray">
+                                            By continuing you accept our <span class="text-decoration-underline" data-bs-toggle="modal" data-bs-target="#privacy_policyModal">Privacy Policy</span> and <span class="text-decoration-underline" data-bs-toggle="modal" data-bs-target="#privacy_policyModal">Term of Use 
+                                        </span></label>
+                                        <input class="form-check-input privacy_policyInp" name="privacyPolicy" type="checkbox" value="" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn_shadow btn_primary rounded-pill w-100 fs_16" type="submit">Register</button>
+                            </div>
+                            <div class="col-12">
+                                <div class="or_txt or_txtLight fs_12 mb_12">
+                                    <span>Or</span>
+                                </div>
+                                <p class="text-center">
+                                    Already have an account?  <a class="link" href="login.html">Login</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- privacy modal -->
+            <div class="modal fade modal__bottom" id="privacy_policyModal" tabindex="-1" aria-labelledby="privacy_policyModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header p-0 border-0">
+                            <button type="button" class="modal__clsBtn rounded_topLg" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p_md pt-1 hide_scrollbar">
+                            <h2 class="fs_20 mb_12">Privacy Policy and Term of Use</h2>
+                            <p class="text_align_justify">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                            </p>
+                            <button class="btn btn_shadow btn_primary rounded-pill w-100" type="button" id="agree_privacyPolicy" data-bs-dismiss="modal" aria-label="Close">Agree</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
