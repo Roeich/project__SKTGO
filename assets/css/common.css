@@ -724,7 +724,10 @@ a:hover{color: var(--c_primary);}
 .header_navLink.active .navicon_fill {
     display: initial;
 }
-
+.main{
+    max-width: var(--max_width);
+    margin: auto;
+}
 .main_py {
     padding: 56px 0px 68px 0px;
 }
