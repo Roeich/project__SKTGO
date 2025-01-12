@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
 </head>
+
 <body>
     <!-- ___________________ start header area ___________________ -->
     <!-- bottom menu -->
@@ -16,47 +19,55 @@
         <div class="container px-0">
             <nav class="header_nav">
                 <a class="header_navLink active" href="index.html">
-                    <img class="header_navIcon navicon_def" src="assets/icons/home.svg" alt="home">
-                    <img class="header_navIcon navicon_fill" src="assets/icons/home_fill.svg" alt="home">
+                    <i class="icon icon_home navicon_def"></i>
+                    <i class="icon icon_home-fill navicon_fill"></i>
                     <div class="header_navTitle">Home</div>
                 </a>
                 <a class="header_navLink" href="survey.html">
-                    <img class="header_navIcon navicon_def" src="assets/icons/survey.svg" alt="survey">
-                    <img class="header_navIcon navicon_fill" src="assets/icons/survey_fill.svg" alt="survey">
+                    <i class="icon icon_survey navicon_def"></i>
+                    <i class="icon icon_survey-fill navicon_fill"></i>
                     <div class="header_navTitle">Survey</div>
                 </a>
                 <a class="header_navLink" href="transaction.html">
-                    <img class="header_navIcon navicon_def" src="assets/icons/transaction.svg" alt="Transaction">
-                    <img class="header_navIcon navicon_fill" src="assets/icons/transaction_fill.svg" alt="Transaction">
+                    <i class="icon icon_transaction navicon_def"></i>
+                    <i class="icon icon_transaction-fill navicon_fill"></i>
                     <div class="header_navTitle">Transaction</div>
                 </a>
                 <a class="header_navLink" href="profile.html">
-                    <img class="header_navIcon navicon_def" src="assets/icons/profile.svg" alt="profile">
-                    <img class="header_navIcon navicon_fill" src="assets/icons/profile_fill.svg" alt="profile">
+                    <i class="icon icon_profile navicon_def"></i>
+                    <i class="icon icon_profile-fill navicon_fill"></i>
                     <div class="header_navTitle">Profile</div>
                 </a>
             </nav>
         </div>
     </header>
-    
+
 
     <!-- top header -->
-    <div class="sticky-top py_12">
-        <div class="header_container p-3">
-            <div class="d-flex align-items-center justify-content-between">
-                <div class="me-2">
-                    <a href="index.html">
-                        <img src="assets/img/JKTGO.svg" alt="JKTGO" width="83" height="26">
-                    </a>
+    <div class="sticky-top py-2">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="pe-3 flex-grow-1">
+                    <button class="top-btn w-100" type="button">
+                        <div>
+                            <i class="icon icon_search-fill"></i>
+                        </div>
+                        <div class="ps-2 text-start">
+                            <div class="fw-semibold">Lagi cari apa?</div>
+                            <div class="fs_10 c_gray">Event Voucher</div>
+                        </div>
+                    </button>
                 </div>
                 <div>
-                    <a class="btn btn_shadow btn_primary rounded-pill btn_sm2" href="create_group.html">Buat Grup</a>
+                    <a class="top-btn" href="wishlist.html">
+                        <i class="icon icon_cart-fill"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <!-- ___________________ start header area ___________________ -->
-    
+
     <!-- ___________________ start main area ___________________ -->
     <main class="main">
         <!-- start banner section -->
@@ -74,6 +85,43 @@
             </div>
         </section>
         <!-- end banner section -->
+
+        <!-- start banner section -->
+        <section class="py-4">
+            <div class="container">
+                <div class="d-flex justify-content-between mb_12">
+                    <h2 class="fs_16 mb-0">Available Event 🛝</h2>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="position-relative">
+                                <a class="d-block" href="event_details.html">
+                                    <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
+                                </a>
+                            </div>
+                            <div class="card-body p_10">
+                                <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Ice Cream Museum</a></h5>
+                                <div class="c_gray mb-1">
+                                    <i class="icon icon_palette-fill"></i>
+                                    <span class="fs_10">Entertainment</span>
+                                </div>
+                                <div class="c_gray mb-1">
+                                    <i class="icon icon_calender-fill"></i>
+                                    <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                </div>
+                                <div>
+                                    <div class="fs_12 c_gray text-decoration-line-through">Rp 500.000</div>
+                                    <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end banner section -->
+
     </main>
     <!-- ___________________ end main area ___________________ -->
 
@@ -87,4 +135,5 @@
     <script src="assets/js/common.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>

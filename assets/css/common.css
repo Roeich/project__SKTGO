@@ -707,7 +707,9 @@ a:hover{color: var(--c_primary);}
     -webkit-box-shadow: inset 0px 2px 0px var(--c_primaryDark);
             box-shadow: inset 0px 2px 0px var(--c_primaryDark);
 }
-
+.header_navLink .icon{
+    font-size: 24px;
+}
 .header_navIcon {
     height: 24px;
     width: 24px;
@@ -718,15 +720,18 @@ a:hover{color: var(--c_primary);}
 
 .header_navLink.active .navicon_def,
 .navicon_fill {
-    display: none;
+    display: none !important;
 }
 
 .header_navLink.active .navicon_fill {
-    display: initial;
+    display: inline-block !important;
 }
 .main{
     max-width: var(--max_width);
     margin: auto;
+}
+.header_navArea ~ .main{
+    padding-bottom: 68px;
 }
 .main_py {
     padding: 56px 0px 68px 0px;
