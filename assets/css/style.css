@@ -145,3 +145,12 @@ body {
     text-wrap: nowrap;
     text-overflow: ellipsis;
 }
+
+
+/*  */
+.flash_sale_section{
+    background-image: url("../img/home/flash-sale-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    padding: 16px 0px;
+}

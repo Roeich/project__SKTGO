@@ -8,5 +8,9 @@ $(document).ready(function(){
         autoplay: true,
         autoplayTimeout: 5000
     });
+
+    $("#payment_countdown").countdown($("#payment_countdown").attr("data-date"), function(event) {
+        $(this).text(event.strftime('%D d %H:%M:%S'));
+    });
     /* ---------------------------- end home page ---------------------------- */
 })
