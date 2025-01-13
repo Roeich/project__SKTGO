@@ -48,22 +48,218 @@
         <div class="container">
             <div class="d-flex align-items-center">
                 <div class="pe-3 flex-grow-1">
-                    <button class="top-btn w-100" type="button">
+                    <button class="top_btn top_searchBtn w-100" type="button"  data-bs-toggle="offcanvas" data-bs-target="#searchOffCanvas" aria-controls="searchOffCanvas">
                         <div>
                             <i class="icon icon_search-fill"></i>
                         </div>
                         <div class="ps-2 text-start">
                             <div class="fw-semibold">Lagi cari apa?</div>
-                            <div class="fs_10 c_gray">Event Voucher</div>
+                            <div class="fs_10 c_gray">Event - Voucher</div>
                         </div>
                     </button>
                 </div>
                 <div>
-                    <a class="top-btn" href="wishlist.html">
+                    <a class="top_btn position-relative" href="wishlist.html">
                         <i class="icon icon_cart-fill"></i>
+                        <div class="position-absolute top-0 end-0 pe-2">
+                            <span class="fs_8 badge bg_danger rounded-pill">2</span>
+                        </div>
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- top search box -->
+    <div class="offcanvas offcanvas-bottom search_offcanvas" tabindex="-1" id="searchOffCanvas" aria-labelledby="searchOffCanvasLabel">
+        <div class="offcanvas-header px-0 py-2">
+            <form class="w-100" action="#">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-3 flex-grow-1">
+                            <input class="top_serachBox form-control w-100" type="search" placeholder="Lagi cari apa?">
+                        </div>
+                        <div>
+                            <button type="reset" class="top_btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <i class="icon icon_cross"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="offcanvas-body p-0 hide_scrollbar">
+
+            <!-- start serach Available Event section -->
+            <section class="py-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb_12">
+                        <h2 class="fs_16 mb-0">Available Event 🛝</h2>
+                    </div>
+                    <div class="mx_3">
+                        <div class="overflow-auto d-flex hide_scrollbar pb-3 px-1">
+                            <div class="px-2">
+                                <a class="card search_eventCard" href="event_details.html">
+                                    <div class="card_header">
+                                        <div class="d-block imgBox_1x1">
+                                            <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
+                                        </div>
+                                        <div class="prd_badge badge_best_deals"><span>Best Deals</span></div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">Ice Cream Museum</h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="icon icon_calender-fill"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="px-2">
+                                <a class="card search_eventCard" href="event_details.html">
+                                    <div class="card_header">
+                                        <div class="d-block imgBox_1x1">
+                                            <img class="card-img-top" src="assets/img/home/event-2.jpg" alt="event">
+                                        </div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">Formula Super</h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="icon icon_calender-fill"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="px-2">
+                                <a class="card search_eventCard" href="event_details.html">
+                                    <div class="card_header">
+                                        <div class="d-block imgBox_1x1">
+                                            <img class="card-img-top" src="assets/img/home/event-3.jpg" alt="event">
+                                        </div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">NBA All Star Coaching</h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="icon icon_calender-fill"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="px-2">
+                                <a class="card search_eventCard" href="event_details.html">
+                                    <div class="card_header">
+                                        <div class="d-block imgBox_1x1">
+                                            <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
+                                        </div>
+                                        <div class="prd_badge badge_best_deals"><span>Best Deals</span></div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">Ice Cream Museum</h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="icon icon_calender-fill"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end serach Available Event section -->
+
+            <!-- start serach Buy Voucher section -->
+            <section class="py-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between mb_12">
+                        <h2 class="fs_16 mb-0">Best Deal Voucher</h2> 
+                    </div>
+                    <div>
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3 sold_out">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Cashback</div>
+                                        <div class="fs_32">25</div>
+                                        <div class="discount_badge">k</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">1.500.000 <span class="fs_12 c_gray text-decoration-line-through">2.000.000</span> <span class="fs_8 badge bg_danger rounded-pill">25%</span></div> 
+                                        <div class="ps-1"><span class="fs_12 fw-bold c_danger">Sold Out</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end serach Buy Voucher section -->
+            
         </div>
     </div>
     <!-- ___________________ start header area ___________________ -->
@@ -72,15 +268,17 @@
     <main class="main">
         <!-- start banner section -->
         <section>
-            <div class="owl-carousel banner_slider">
-                <div>
-                    <img class="img-fluid w-100" src="assets/img/home/a.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-fluid w-100" src="assets/img/home/b.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-fluid w-100" src="assets/img/home/c.jpg" alt="">
+            <div class="banner_sliderWrapper">
+                <div class="owl-carousel banner_slider">
+                    <div class="banner_imgBox">
+                        <img class="img-fluid w-100" src="assets/img/home/a.jpg" alt="">
+                    </div>
+                    <div class="banner_imgBox">
+                        <img class="img-fluid w-100" src="assets/img/home/b.jpg" alt="">
+                    </div>
+                    <div class="banner_imgBox">
+                        <img class="img-fluid w-100" src="assets/img/home/c.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -155,6 +353,9 @@
                             <div class="card_header">
                                 <a class="d-block imgBox_1x1" href="event_details.html">
                                     <img class="card-img-top" src="assets/img/home/event-3.jpg" alt="event">
+                                    <div class="sold_out_text">
+                                        Sold Out
+                                    </div>
                                 </a>
                                 <button class="btn btn-light wishlist_btn" type="button">
                                     <i class="icon icon_heart"></i>
@@ -281,7 +482,7 @@
                                         <span>Hotel</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold pl-1 c_danger">5 Left</div>
+                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold ps-1 c_danger">5 Left</div>
                                     </div>
                                 </div>
                             </a>
@@ -305,7 +506,7 @@
                                         <span>Hotel</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold pl-1 c_danger">Sold Out</div>
+                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold ps-1 c_danger">Sold Out</div>
                                     </div>
                                 </div>
                             </a>
@@ -346,22 +547,222 @@
                     <button class="btn filter_btn" id="retailer-tab" data-bs-toggle="tab" data-bs-target="#retailer-tab-pane" type="button" role="tab" aria-controls="retailer-tab-pane" aria-selected="false">Retailer</button>
                     <button class="btn filter_btn" id="flight_ticket-tab" data-bs-toggle="tab" data-bs-target="#flight_ticket-tab-pane" type="button" role="tab" aria-controls="flight_ticket-tab-pane" aria-selected="false">Flight Ticket</button>
                 </div>
-                <div id="voucherTabContent">
+                <div class="tab-content" id="voucherTabContent">
                     <div class="tab-pane fade show active" id="hotel-tab-pane" role="tabpanel" aria-labelledby="hotel-tab" tabindex="0">
-                        <div class="voucher_item">
-                            <div class="voucher_imgBox">
-                                
-                            </div>
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3 sold_out">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Cashback</div>
+                                        <div class="fs_32">25</div>
+                                        <div class="discount_badge">k</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">1.500.000 <span class="fs_12 c_gray text-decoration-line-through">2.000.000</span> <span class="fs_8 badge bg_danger rounded-pill">25%</span></div> 
+                                        <div class="ps-1"><span class="fs_12 fw-bold c_danger">Sold Out</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="restaurant-tab-pane" role="tabpanel" aria-labelledby="restaurant-tab" tabindex="0">
-
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3 sold_out">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Cashback</div>
+                                        <div class="fs_32">25</div>
+                                        <div class="discount_badge">k</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">1.500.000 <span class="fs_12 c_gray text-decoration-line-through">2.000.000</span> <span class="fs_8 badge bg_danger rounded-pill">25%</span></div> 
+                                        <div class="ps-1"><span class="fs_12 fw-bold c_danger">Sold Out</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="retailer-tab-pane" role="tabpanel" aria-labelledby="retailer-tab" tabindex="0">
-
+                        <div class="mb-3 sold_out">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Cashback</div>
+                                        <div class="fs_32">25</div>
+                                        <div class="discount_badge">k</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">1.500.000 <span class="fs_12 c_gray text-decoration-line-through">2.000.000</span> <span class="fs_8 badge bg_danger rounded-pill">25%</span></div> 
+                                        <div class="ps-1"><span class="fs_12 fw-bold c_danger">Sold Out</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="flight_ticket-tab-pane" role="tabpanel" aria-labelledby="flight_ticket-tab" tabindex="0">
-
+                        <div class="mb-3">
+                            <a class="voucher_item" href="#">
+                                <div class="voucher_imgBox">
+                                    <div class="text_outline">
+                                        <div>Discount</div>
+                                        <div class="fs_32">50</div>
+                                        <div class="discount_badge">%</div>
+                                    </div>
+                                    <img class="voucher_img" src="assets/img/home/restaurant.jpg" alt="restaurant">
+                                </div>
+                                <div class="voucher_content">
+                                    <div class="fs_14 fw-bold mb-2">Voucher Name</div>
+                                    <div class="c_gray fs_10 mb-2">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="border_bottom_dashed mb-1"></div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="fs_14 fw-bold">250.000 <span class="fs_12 c_gray text-decoration-line-through">500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> 
+                                        <div class="ps-1"><button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Buy</button></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

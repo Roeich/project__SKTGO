@@ -3,20 +3,41 @@ body {
     background-color: #F9F9F9;
 }
 
-.top-btn {
+.top_btn ,
+.top_serachBox{
     display: flex;
     align-items: center;
-    padding: 8px 16px;
+    padding: 8px 11px;
     height: 48px;
-    background: var(--bg_white);
+    background-color: var(--bg_white);
     border: 1px solid #F3F3F3;
-    box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.1);
-    border-radius: 36px;
+    box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.1) !important;
+    border-radius: 50rem;
 }
-
-.top-btn .icon {
+.top_btn .icon {
     font-size: 24px;
 }
+.top_searchBtn{
+    padding: 8px 16px;
+}
+.offcanvas.search_offcanvas{
+    height: 100svh;
+}
+.top_serachBox{
+    padding-left: 48px;
+    padding-right: 16px;
+    background-image: url("../icons/icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left 16px center;
+}
+.search_eventCard{
+    width: 146px;
+    text-decoration: none;
+}
+
+
+
 
 
 .main {
@@ -25,7 +46,25 @@ body {
 
 /* banner */
 .banner_slider {}
-
+.banner_sliderWrapper,
+.banner_imgBox {
+    position: relative;
+    padding-bottom: 56%;
+}
+.banner_slider{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.banner_imgBox>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .owl-carousel .owl-dots {
     position: absolute;
     left: 0;
@@ -63,11 +102,10 @@ body {
     border-bottom: none;
 }
 
-.card.sold_out {
+.sold_out {
     pointer-events: none;
     filter: grayscale(1);
 }
-
 .imgBox_1x1,
 .imgBox_2x1 {
     position: relative;
@@ -91,7 +129,17 @@ body {
 .card-img-top {
     border-radius: 12px 12px 0px 0px;
 }
-
+.sold_out_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    color: var(--c_white);
+}
 .wishlist_btn {
     position: absolute;
     z-index: 2;
@@ -330,4 +378,79 @@ body {
     background: var(--bg_secondary);
     border: 1px solid var(--bs-black);
     box-shadow: 1px 1px 0px var(--bs-black), inset 0px -3px 0px var(--bg_primary);
+}
+.voucher_item{
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--c_secondary);
+    filter: drop-shadow(0px 4px 8px rgba(36, 36, 36, 0.1));
+}
+.voucher_item:hover{
+    color: var(--c_secondary);
+}
+.voucher_imgBox{
+    width: 106px;
+    position: relative;
+}
+.voucher_imgBox .text_outline{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    font-weight: 600;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 0.95;
+}
+.voucher_img{
+    width: 106px;
+    min-width: 106px;
+    height: 100%;
+    object-fit: cover;
+}
+.voucher_item .discount_badge{
+    position: absolute;
+    right: 0;
+    top: 22%;
+    width: 2em;
+    height: 2em;
+    font-size: 8px;
+    text-shadow: none;
+    background-image: url("../icons/star-badge.svg");
+    background-repeat: none;
+    background-size: contain;
+    padding-top: 0.5em;
+}
+.voucher_content{
+    flex-grow: 1;
+    padding: 12px 2px;
+    background-color: var(--bg_white);
+    position: relative;
+    margin-right: 14px;
+}
+.voucher_content::before,
+.voucher_content::after{
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.voucher_content::before{
+    left: 1px;
+    transform: translateX(-100%);
+    background-image: url("../img/home/voucher_left.svg");
+}
+.voucher_content::after{
+    right: 1px;
+    transform: translateX(100%);
+    background-image: url("../img/home/voucher_right.svg");
+}
+.border_bottom_dashed{
+    border-bottom: 1px dashed #EAEAEA;
 }

@@ -1,5 +1,13 @@
 $(document).ready(function(){
     /* ---------------------------- start home page ---------------------------- */
+    
+    // search input
+    $(".top_searchBtn").click(function(){
+        setTimeout(()=>{
+            $(".top_serachBox").focus();
+        },600);
+    });
+
     // banner slider
     $(".banner_slider").owlCarousel({
         items: 1,
@@ -29,5 +37,6 @@ $(document).ready(function(){
         autoplay: true,
         autoplayTimeout: 3000
     });
+
     /* ---------------------------- end home page ---------------------------- */
 })
