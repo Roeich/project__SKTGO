@@ -95,7 +95,7 @@
                 <div class="row g-3">
                     <div class="col-6">
                         <div class="card">
-                            <div class="position-relative">
+                            <div class="card_header">
                                 <a class="d-block imgBox_1x1" href="event_details.html">
                                     <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
                                 </a>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card">
-                            <div class="position-relative">
+                            <div class="card_header">
                                 <a class="d-block imgBox_1x1" href="event_details.html">
                                     <img class="card-img-top" src="assets/img/home/event-2.jpg" alt="event">
                                 </a>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card sold_out">
-                            <div class="position-relative">
+                            <div class="card_header">
                                 <a class="d-block imgBox_1x1" href="event_details.html">
                                     <img class="card-img-top" src="assets/img/home/event-3.jpg" alt="event">
                                 </a>
@@ -180,7 +180,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card">
-                            <div class="position-relative">
+                            <div class="card_header">
                                 <a class="d-block imgBox_1x1" href="event_details.html">
                                     <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
                                 </a>
@@ -216,130 +216,157 @@
         <section class="flash_sale_section">
             <div class="container">
                 <div class="d-flex justify-content-between mb_12">
-                    <h2 class="fs_16 mb-0">Flash Sale E-voucher <i class="icon icon_lighting-fill"></i></h2>
-                    <div class="pl-2">
-                        <span id="payment_countdown" class="fw-bold" data-date="2025/10/27">00:00</span>
+                    <h2 class="fs_16 text_outline mb-0">Flash Sale E-voucher <i class="icon icon_lighting-fill"></i></h2>
+                    <div class="ps-2">
+                        <span id="flash_sale_countdown" class="fw-bold countdown" data-date="2025/01/15">00:00</span>
                     </div>
                 </div>
-                <div class="row g-3">
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="position-relative">
-                                <a class="d-block imgBox_1x1" href="event_details.html">
-                                    <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
-                                </a>
-                                <button class="btn btn-light wishlist_btn" type="button">
-                                    <i class="icon icon_heart"></i>
-                                    <i class="icon icon_heart-fill"></i>
-                                </button>
-                                <div class="prd_badge badge_best_deals"><span>Best Deals</span></div>
-                            </div>
-                            <div class="card-body p_10">
-                                <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Ice Cream Museum</a></h5>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_palette-fill"></i>
-                                    <span class="fs_10">Entertainment</span>
+                <div class="mx_3 mb-3">
+                    <div class="overflow-auto d-flex hide_scrollbar pb-3 px-1">
+                        <div class="px-2">
+                            <a class="card voucher_card" href="voucher_details.html">
+                                <div class="card_header">
+                                    <div class="card_slider owl-carousel">
+                                        <div class="d-block imgBox_2x1">
+                                            <img class="card-img-top" src="assets/img/home/voucher-1.jpg" alt="voucher">
+                                        </div>
+                                        <div class="d-block imgBox_2x1">
+                                            <img class="card-img-top" src="assets/img/home/voucher-2.jpg" alt="voucher">
+                                        </div>
+                                        <div class="d-block imgBox_2x1">
+                                            <img class="card-img-top" src="assets/img/home/voucher-3.jpg" alt="voucher">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_calender-fill"></i>
-                                    <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                <div class="card-body p_10">
+                                    <h5 class="card-title fs_14 mb-1">Voucher Name</h5>
+                                    <div class="fs_12 mb-1">
+                                        Unlimited Playing Pool
+                                    </div>
+                                    <div class="c_gray fs_10 mb-1">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Precious Billiard</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="fs_12 c_gray text-decoration-line-through">Rp 500.000</div>
-                                    <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                                <div class="most_recommended">
+                                    <div>Cheapest Ever</div>
+                                    <div>
+                                        <i class="fs_16 icon icon_trophy"></i>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="px-2">
+                            <a class="card voucher_card" href="voucher_details.html">
+                                <div class="card_header">
+                                    <div class="d-block imgBox_2x1">
+                                        <img class="card-img-top" src="assets/img/home/voucher-1.jpg" alt="voucher">
+                                    </div>
+                                    <div class="prd_badge badge_best_deals badge_top"><span>Best Deals</span></div>
+                                </div>
+                                <div class="card-body p_10">
+                                    <h5 class="card-title fs_14 mb-1">The First Aquarium Restaurant in Bali</h5>
+                                    <div class="fs_12 mb-1">
+                                        The First Aquarium Restaurant in Bali
+                                    </div>
+                                    <div class="c_gray fs_10 mb-1">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold pl-1 c_danger">5 Left</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="px-2">
+                            <a class="card voucher_card sold_out" href="voucher_details.html">
+                                <div class="card_header">
+                                    <div class="d-block imgBox_2x1">
+                                        <img class="card-img-top" src="assets/img/home/voucher-3.jpg" alt="voucher">
+                                    </div>
+                                </div>
+                                <div class="card-body p_10">
+                                    <h5 class="card-title fs_14 mb-1">The First Aquarium Restaurant in Bali</h5>
+                                    <div class="fs_12 mb-1">
+                                        The First Aquarium Restaurant in Bali
+                                    </div>
+                                    <div class="c_gray fs_10 mb-1">
+                                        <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                        <span>Pestrant Logic</span> | 
+                                        <i class="fs_16 icon icon_ticket-fill"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold pl-1 c_danger">Sold Out</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="position-relative">
-                                <a class="d-block imgBox_1x1" href="event_details.html">
-                                    <img class="card-img-top" src="assets/img/home/event-2.jpg" alt="event">
-                                </a>
-                                <button class="btn btn-light wishlist_btn listed" type="button">
-                                    <i class="icon icon_heart"></i>
-                                    <i class="icon icon_heart-fill"></i>
-                                </button>
-                            </div>
-                            <div class="card-body p_10">
-                                <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Formula Super</a></h5>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_palette-fill"></i>
-                                    <span class="fs_10">Race</span>
-                                </div>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_calender-fill"></i>
-                                    <span class="fs_10">1 Nov - 21 Dec 2023</span>
-                                </div>
-                                <div>
-                                    <div class="fs_12 c_gray text-decoration-line-through">Rp 1.000.000</div>
-                                    <div class="fs_14 fw-bold">Rp 660.000 <span class="fs_8 badge bg_danger rounded-pill">30%</span></div>
-                                </div>
-                            </div>
+                </div>
+
+                <div>
+                    <div class="survey_info_card">
+                        <div class="">
+                            <i class="fs_32 icon icon_piggy-bank-fill"></i>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card sold_out">
-                            <div class="position-relative">
-                                <a class="d-block imgBox_1x1" href="event_details.html">
-                                    <img class="card-img-top" src="assets/img/home/event-3.jpg" alt="event">
-                                </a>
-                                <button class="btn btn-light wishlist_btn" type="button">
-                                    <i class="icon icon_heart"></i>
-                                    <i class="icon icon_heart-fill"></i>
-                                </button>
-                            </div>
-                            <div class="card-body p_10">
-                                <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">NBA All Star Coaching</a></h5>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_palette-fill"></i>
-                                    <span class="fs_10">Sport</span>
-                                </div>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_calender-fill"></i>
-                                    <span class="fs_10">1 Nov - 21 Dec 2023</span>
-                                </div>
-                                <div>
-                                    <div class="fs_12 c_gray text-decoration-line-through">Rp 1.000.000</div>
-                                    <div class="fs_14 fw-bold">Rp 660.000 <span class="fs_8 badge bg_danger rounded-pill">30%</span></div>
-                                </div>
-                            </div>
+                        <div class="px-2 flex-grow-1">
+                            <h6 class="fs_14 mb-0">Want to get Rp 100.000?</h6>
+                            <div class="fs_10">Do a short survey for our improvements</div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="position-relative">
-                                <a class="d-block imgBox_1x1" href="event_details.html">
-                                    <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
-                                </a>
-                                <button class="btn btn-light wishlist_btn" type="button">
-                                    <i class="icon icon_heart"></i>
-                                    <i class="icon icon_heart-fill"></i>
-                                </button>
-                                <div class="prd_badge badge_new"><span>New</span></div>
-                            </div>
-                            <div class="card-body p_10">
-                                <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Tech Week ID BLRT</a></h5>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_palette-fill"></i>
-                                    <span class="fs_10">Entertainment</span>
-                                </div>
-                                <div class="c_gray mb-1">
-                                    <i class="icon icon_calender-fill"></i>
-                                    <span class="fs_10">1 Nov - 21 Dec 2023</span>
-                                </div>
-                                <div>
-                                    <div class="fs_12 c_gray text-decoration-line-through">Rp 500.000</div>
-                                    <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
-                                </div>
-                            </div>
+                        <div>
+                            <a class="btn btn_shadow btn_primary rounded-pill btn_sm2" href="#">Gas</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- end Flash Sale E-voucher section -->
+
+        <!-- start Buy Voucher section -->
+        <section class="py-4">
+            <div class="container">
+                <div class="d-flex justify-content-between mb_12">
+                    <h2 class="fs_16 mb-0">Buy Voucher 🛍️</h2> 
+                    <div class="ps-2">
+                        <a class="see_all" href="#">See All</a>
+                    </div>
+                </div>
+                <div class="fitler_btns" id="voucherTab" role="tablist">
+                    <button class="btn filter_btn active" id="hotel-tab" data-bs-toggle="tab" data-bs-target="#hotel-tab-pane" type="button" role="tab" aria-controls="hotel-tab-pane" aria-selected="true">Hotel</button>
+                    <button class="btn filter_btn" id="restaurant-tab" data-bs-toggle="tab" data-bs-target="#restaurant-tab-pane" type="button" role="tab" aria-controls="restaurant-tab-pane" aria-selected="false">Restaurant</button>
+                    <button class="btn filter_btn" id="retailer-tab" data-bs-toggle="tab" data-bs-target="#retailer-tab-pane" type="button" role="tab" aria-controls="retailer-tab-pane" aria-selected="false">Retailer</button>
+                    <button class="btn filter_btn" id="flight_ticket-tab" data-bs-toggle="tab" data-bs-target="#flight_ticket-tab-pane" type="button" role="tab" aria-controls="flight_ticket-tab-pane" aria-selected="false">Flight Ticket</button>
+                </div>
+                <div id="voucherTabContent">
+                    <div class="tab-pane fade show active" id="hotel-tab-pane" role="tabpanel" aria-labelledby="hotel-tab" tabindex="0">
+                        <div class="voucher_item">
+                            <div class="voucher_imgBox">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="restaurant-tab-pane" role="tabpanel" aria-labelledby="restaurant-tab" tabindex="0">
+
+                    </div>
+                    <div class="tab-pane fade" id="retailer-tab-pane" role="tabpanel" aria-labelledby="retailer-tab" tabindex="0">
+
+                    </div>
+                    <div class="tab-pane fade" id="flight_ticket-tab-pane" role="tabpanel" aria-labelledby="flight_ticket-tab" tabindex="0">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Buy Voucher section -->
 
     </main>
     <!-- ___________________ end main area ___________________ -->
