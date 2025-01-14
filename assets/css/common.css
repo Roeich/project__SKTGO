@@ -1,46 +1,46 @@
 @font-face {
-    font-family: "Inter", serif;
+    font-family: "Inter";
     src: url("../fonts/Inter.ttf");
 }
 @font-face {
-    font-family: "Figtree", serif;
+    font-family: "Figtree";
     src: url("../fonts/Figtree.ttf");
 }
 @font-face {
-    font-family: "Poppins", serif;
+    font-family: "Poppins";
     src: url("../fonts/Poppins-Regular.ttf");
     font-weight: 400;
 }
 @font-face {
-    font-family: "Poppins", serif;
+    font-family: "Poppins";
     src: url("../fonts/Poppins-Medium.ttf");
     font-weight: 500;
 }
 @font-face {
-    font-family: "Poppins", serif;
+    font-family: "Poppins";
     src: url("../fonts/Poppins-SemiBold.ttf");
     font-weight: 600;
 }
 @font-face {
-    font-family: "Poppins", serif;
+    font-family: "Poppins";
     src: url("../fonts/Poppins-Bold.ttf");
     font-weight: 700;
 }
 @font-face {
-    font-family: "Roboto", serif;
+    font-family: "Roboto";
     src: url("../fonts/Roboto.ttf");
 }
 @font-face {
-    font-family: "Manrope", serif;
+    font-family: "Manrope";
     src: url("../fonts/Manrope.ttf");
 }
 @font-face {
-    font-family: "SF-Pro-Display", serif;
+    font-family: "SF-Pro-Display";
     src: url("../fonts/SF-Pro-Display-Regular.otf");
     font-weight: 400;
 }
 @font-face {
-    font-family: "SF-Pro-Text", serif;
+    font-family: "SF-Pro-Text";
     src: url("../fonts/SF-Pro-Text-Semibold.otf");
     font-weight: 600;
 }
