@@ -1,4 +1,4 @@
-/*  */
+/* .............. start home page .............. */
 body {
     background-color: #F9F9F9;
 }
@@ -454,3 +454,5 @@ body {
 .border_bottom_dashed{
     border-bottom: 1px dashed #EAEAEA;
 }
+.opacity_1{opacity: 1;}
+/* .............. end home page .............. */

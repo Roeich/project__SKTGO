@@ -38,5 +38,8 @@ $(document).ready(function(){
         autoplayTimeout: 3000
     });
 
+    // announce modal open
+    $("#announceModal").modal("show");
+
     /* ---------------------------- end home page ---------------------------- */
 })
