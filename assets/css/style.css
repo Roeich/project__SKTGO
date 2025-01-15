@@ -579,5 +579,35 @@ body {
 .bottom_toast_container .toast{
     transform: translateY(-70px);
 }
+.share_opts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
 
+
+.share_opt {
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--c_secondary);
+    cursor: pointer;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+    background: transparent;
+}
+
+.share_opt:active {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+}
+
+.share_opt img {
+    height: 4.2em;
+}
 /* .............. end voucher details page .............. */

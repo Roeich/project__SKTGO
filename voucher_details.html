@@ -87,9 +87,63 @@
                                 <i class="icon icon_heart"></i>
                                 <i class="icon icon_heart-fill"></i>
                             </button>
-                            <button class="btn btn-light btn_circle" type="button">
+                            <button class="btn btn-light btn_circle" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">
                                 <i class="icon icon_reply-fill"></i>
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- share modal -->
+                    <div class="modal fade modal__bottom" id="shareModal" tabindex="-1" aria-labelledby="shareModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title fs_20" id="shareModalLabel">Share Voucher</h5>
+                                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4 pt-0">
+                                    <div class="d-flex pb-3 mb-3 border_bottom_dashed">
+                                        <div style="width: 48px;">
+                                            <div class="imgBox_1x1">
+                                                <img src="assets/img/voucher/banner.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="ps-2 flex-grow-1">
+                                            <h6 class="fs_16 ff_inter">Voucher Name</h6>
+                                            <div class="mb-1">
+                                                <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                                <span>Precious Billiard</span>
+                                            </div>
+                                            <div class="">
+                                                <i class="fs_20 icon icon_ticket-fill"></i>
+                                                <span>Hotel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="share_opts">
+                                        <button class="share_opt text-center copy__link" data-clipboard-action="copy" data-clipboard-text="https://www.google.com/">
+                                            <img class="mb-2" src="assets/icons/link.svg" alt="link">
+                                            <div>Salin Link</div>
+                                        </button>
+                                        <a class="share_opt text-center" href="#">
+                                            <img class="mb-2" target="_blank" src="assets/icons/facebook.svg" alt="facebook">
+                                            <div>Facebook</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#">
+                                            <img class="mb-2" target="_blank" src="assets/icons/whatsapp.svg" alt="whatsapp">
+                                            <div>Whatsapp</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#">
+                                            <img class="mb-2" target="_blank" src="assets/icons/twitter.svg" alt="twitter">
+                                            <div>Twitter</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#">
+                                            <img class="mb-2" target="_blank" src="assets/icons/instagram.svg" alt="instagram">
+                                            <div>Instagram</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
