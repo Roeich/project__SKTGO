@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Voucher Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+</head>
+
+<body>
+    <!-- ___________________ start header area ___________________ -->
+    <!-- top header -->
+    <div class="position-absolute top-0 start-0 w-100 z-3 py-2">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="ms-auto">
+                    <a class="top_btn position-relative" href="cart.html">
+                        <i class="icon icon_cart-fill"></i>
+                        <div class="position-absolute top-0 end-0 pe-2">
+                            <span class="fs_8 badge bg_danger rounded-pill">2</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert top toast -->
+    <div class="toast-container top_toast_container">
+        <div class="toast align-items-center toast_dark" id="topToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="1000">
+            <div class="toast-body p-0">
+                Added to Wishlist
+            </div>
+        </div>
+    </div>
+    <!-- alert bottom toast -->
+    <div class="toast-container bottom_toast_container">
+        <div class="toast align-items-center toast_dark" id="bottomToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="1000">
+            <div class="toast-body p-0">
+                Added to Cart
+            </div>
+        </div>
+    </div>
+
+    <!-- ___________________ start header area ___________________ -->
+
+    <!-- ___________________ start main area ___________________ -->
+    <main class="main main_pb">
+        <!-- start voucher details section -->
+        <section>
+
+            <!-- banner image -->
+            <div class="banner_imgBox">
+                <img class="img-fluid w-100" src="assets/img/voucher/banner.jpg" alt="banner">
+            </div>
+
+            <!-- countdown row -->
+            <div class="py_12 flash_sale_bg">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="fs_16 text_outline mb-0">Flash Sale E-voucher <i class="icon icon_lighting-fill"></i>
+                        </h2>
+                        <div class="ps-2">
+                            <span id="flash_sale_countdown" class="fw-bold countdown" data-date="2025/01/15">00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- details area -->
+            <div class="container">
+                <!-- action bar -->
+                <div class="py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="pe-2">
+                            <span class="badge bg-black me-2"><i class="fs_16 icon icon_ticket-fill"></i>
+                                E-Voucher</span>
+                            <span class="c_danger"><i class="fs_16 icon icon_graph-down-arrow"></i> 5 Left</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-light wishlist_btn add_wishlist" type="button">
+                                <i class="icon icon_heart"></i>
+                                <i class="icon icon_heart-fill"></i>
+                            </button>
+                            <button class="btn btn-light btn_circle" type="button">
+                                <i class="icon icon_reply-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- details -->
+                <div class="pb-3 border_bottom_dashed">
+                    <h2 class="fs_18 mb-2">Japanese Festival</h2>
+                    <p class="mb_12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit</p>
+                    <div class="d-inline-block p-2 rounded_6 bg-light">
+                        <div class="c_gray">
+                            <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                            <span>Precious Billiard</span> |
+                            <i class="fs_20 icon icon_ticket-fill"></i>
+                            <span>Hotel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- location -->
+                <div class="py-3 border_bottom_dashed">
+                    <div class="map_wrapper mb-3">
+                        <iframe class="map_box"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.0506074257!2d-74.30916781042566!3d40.69719335017224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1736930075959!5m2!1sen!2sbd"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a class="map_link" href="#">
+                            <i class="icon icon_cursor-fill"></i> <span class="fs_10">Open Maps</span>
+                        </a>
+                    </div>
+                    <h2 class="fs_18 mb-2">Hotel Ampera Fatmawati</h2>
+                    <div class="d-flex">
+                        <div>
+                            <i class="fs_20 icon icon_geo-mark"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                            <p class="mb-2">Jl. Gerbang Pemuda No.3, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota
+                                Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- terms & conditions -->
+                <div class="py-3">
+                    <h2 class="fs_18 mb-2">Terms & Conditions</h2>
+                    <p class="mb-2">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <ul>
+                        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. </li>
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. </li>
+                        <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</li>
+                        <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- bottom action row -->
+            <div class="position-fixed start-0 bottom-0 w-100 py-2 bg-white border-top">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="pe-2">
+                            <div><span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span
+                                    class="fs_8 badge bg_danger rounded-pill">74%</span></div>
+                            <div class="fs_14 fw-bold">Rp 125.000</div>
+                        </div>
+                        <div>
+                            <button class="btn addCart_btn btn_shadow rounded-pill add_cart" type="button">
+                                <i class="icon icon_cart-plus-fill"></i>
+                                <i class="icon icon_cart-plus"></i>
+                            </button>
+                            <a class="btn btn_sm btn_shadow btn_primary rounded-pill ms-1" href="checkout.html">Buy
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end voucher details section -->
+
+    </main>
+    <!-- ___________________ end main area ___________________ -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <!--  -->
+    <script src="assets/js/voucher_details.js"></script>
+</body>
+
+</html>

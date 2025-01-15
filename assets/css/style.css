@@ -3,8 +3,8 @@ body {
     background-color: #F9F9F9;
 }
 
-.top_btn ,
-.top_serachBox{
+.top_btn,
+.top_serachBox {
     display: flex;
     align-items: center;
     padding: 8px 11px;
@@ -14,16 +14,20 @@ body {
     box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.1) !important;
     border-radius: 50rem;
 }
+
 .top_btn .icon {
     font-size: 24px;
 }
-.top_searchBtn{
+
+.top_searchBtn {
     padding: 8px 16px;
 }
-.offcanvas.search_offcanvas{
+
+.offcanvas.search_offcanvas {
     height: 100svh;
 }
-.top_serachBox{
+
+.top_serachBox {
     padding-left: 48px;
     padding-right: 16px;
     background-image: url("../icons/icon-search.svg");
@@ -31,7 +35,8 @@ body {
     background-size: 24px;
     background-position: left 16px center;
 }
-.search_eventCard{
+
+.search_eventCard {
     width: 146px;
     text-decoration: none;
 }
@@ -46,17 +51,20 @@ body {
 
 /* banner */
 .banner_slider {}
+
 .banner_sliderWrapper,
 .banner_imgBox {
     position: relative;
     padding-bottom: 56%;
 }
-.banner_slider{
+
+.banner_slider {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
 }
+
 .banner_imgBox>img {
     position: absolute;
     top: 0;
@@ -65,6 +73,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .owl-carousel .owl-dots {
     position: absolute;
     left: 0;
@@ -106,6 +115,7 @@ body {
     pointer-events: none;
     filter: grayscale(1);
 }
+
 .imgBox_1x1,
 .imgBox_2x1 {
     position: relative;
@@ -129,7 +139,8 @@ body {
 .card-img-top {
     border-radius: 12px 12px 0px 0px;
 }
-.sold_out_text{
+
+.sold_out_text {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,11 +151,8 @@ body {
     font-weight: 700;
     color: var(--c_white);
 }
+
 .wishlist_btn {
-    position: absolute;
-    z-index: 2;
-    top: 0.7143rem;
-    right: 0.7143rem;
     padding: 0.2857rem;
     font-size: 1.7143rem;
     line-height: 1;
@@ -155,13 +163,31 @@ body {
     height: 2.4286rem;
 }
 
-.wishlist_btn .icon_heart-fill,
-.wishlist_btn.listed .icon_heart {
+.card .wishlist_btn {
+    position: absolute;
+    z-index: 2;
+    top: 0.7143rem;
+    right: 0.7143rem;
+}
+
+.add_wishlist .icon_heart-fill,
+.add_wishlist.added_wishlist .icon_heart {
     display: none;
 }
 
-.wishlist_btn.listed .icon_heart-fill {
+.add_wishlist.added_wishlist .icon_heart-fill {
     display: inline-block;
+}
+
+.btn_circle {
+    padding: 0.2857rem;
+    font-size: 1.7143rem;
+    line-height: 1;
+    background-color: var(--bg_white);
+    border: none;
+    border-radius: 50%;
+    width: 2.4286rem;
+    height: 2.4286rem;
 }
 
 .prd_badge {
@@ -379,7 +405,8 @@ body {
     border: 1px solid var(--bs-black);
     box-shadow: 1px 1px 0px var(--bs-black), inset 0px -3px 0px var(--bg_primary);
 }
-.voucher_item{
+
+.voucher_item {
     display: flex;
     border-radius: 12px;
     overflow: hidden;
@@ -387,30 +414,35 @@ body {
     color: var(--c_secondary);
     filter: drop-shadow(0px 4px 8px rgba(36, 36, 36, 0.1));
 }
-.voucher_item:hover{
+
+.voucher_item:hover {
     color: var(--c_secondary);
 }
-.voucher_imgBox{
+
+.voucher_imgBox {
     width: 106px;
     position: relative;
 }
-.voucher_imgBox .text_outline{
+
+.voucher_imgBox .text_outline {
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
     font-weight: 600;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     line-height: 0.95;
 }
-.voucher_img{
+
+.voucher_img {
     width: 106px;
     min-width: 106px;
     height: 100%;
     object-fit: cover;
 }
-.voucher_item .discount_badge{
+
+.voucher_item .discount_badge {
     position: absolute;
     right: 0;
     top: 22%;
@@ -423,15 +455,17 @@ body {
     background-size: contain;
     padding-top: 0.5em;
 }
-.voucher_content{
+
+.voucher_content {
     flex-grow: 1;
     padding: 12px 2px;
     background-color: var(--bg_white);
     position: relative;
     margin-right: 14px;
 }
+
 .voucher_content::before,
-.voucher_content::after{
+.voucher_content::after {
     content: "";
     display: block;
     width: 1rem;
@@ -441,18 +475,109 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.voucher_content::before{
+
+.voucher_content::before {
     left: 1px;
     transform: translateX(-100%);
     background-image: url("../img/home/voucher_left.svg");
 }
-.voucher_content::after{
+
+.voucher_content::after {
     right: 1px;
     transform: translateX(100%);
     background-image: url("../img/home/voucher_right.svg");
 }
-.border_bottom_dashed{
+
+.border_bottom_dashed {
     border-bottom: 1px dashed #EAEAEA;
 }
-.opacity_1{opacity: 1;}
+
+.opacity_1 {
+    opacity: 1;
+}
+
 /* .............. end home page .............. */
+
+/* .............. start voucher details page .............. */
+.flash_sale_bg {
+    background-image: url("../img/home/flash-sale-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.map_wrapper {
+    position: relative;
+}
+
+.map_box {
+    height: 100px;
+    width: 100%;
+}
+
+.map_link {
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #ECECEC;
+    border-bottom: none;
+    border-right: none;
+    background-color: var(--bg_white);
+    padding: 2px 8px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.addCart_btn {
+    font-size: var(--fs_20);
+    padding: 0.2em 0.6em;
+}
+.addCart_btn.added_cart{
+    background-color: var(--bg_secondary);
+}
+
+.add_cart.added_cart .icon_cart-plus-fill,
+.add_cart .icon_cart-plus {
+    display: none;
+}
+
+.add_cart.added_cart .icon_cart-plus {
+    display: inline-block;
+}
+
+.top_toast_container{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.bottom_toast_container{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.toast_dark {
+    color: var(--c_white);
+    border-radius: 50rem;
+    max-width: 100%;
+    width: max-content;
+    padding: 8px 20px;
+    background: var(--bg_secondary);
+    margin: auto;
+}
+.toast{
+    transition: 0.3s;
+    transform: translateY(0px);
+}
+.top_toast_container .toast{
+    transform: translateY(20px);
+}
+.bottom_toast_container .toast{
+    transform: translateY(-70px);
+}
+
+/* .............. end voucher details page .............. */

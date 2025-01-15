@@ -194,6 +194,7 @@ a:hover{color: var(--c_primary);}
 .p_20{padding: var(--p_20);}
 .pl_10{padding-left: var(--p_10);}
 .px_20{padding-left: var(--p_20);padding-right: var(--p_20);}
+.py_12{padding-top: var(--p_12);padding-bottom: var(--p_12);}
 
 .mb_8{margin-bottom: var(--m_8);}
 .mb_10{margin-bottom: var(--m_10);}
