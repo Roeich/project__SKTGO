@@ -140,7 +140,7 @@ a{color: var(--c_black);}
 a:hover{color: var(--c_primary);}
 .container{max-width: var(--max_width);}
 
-.c_primary {color: var(--c_primary);}
+.c_primary {color: var(--c_primary) !important;}
 .c_secondary {color: var(--c_secondary);}
 .c_primaryDark {color: var(--c_primaryDark);}
 .c_danger {color: var(--c_danger);}
