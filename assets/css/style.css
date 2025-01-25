@@ -9,18 +9,22 @@ body {
     align-items: center;
     padding: 8px 11px;
     height: 48px;
+    min-width: 48px;
     background-color: var(--bg_white);
     border: 1px solid #F3F3F3;
     box-shadow: 0px 4px 20px rgba(36, 36, 36, 0.1) !important;
     border-radius: 50rem;
+    text-decoration: none;
+    justify-content: center;
 }
 
-.top_btn .icon {
-    font-size: 24px;
+.top_btn i {
+    font-size: 20px;
 }
 
 .top_searchBtn {
     padding: 8px 16px;
+    justify-content: flex-start;
 }
 
 .offcanvas.search_offcanvas {
@@ -48,7 +52,17 @@ body {
 .main {
     background-color: var(--bg_white);
 }
-
+i.fa-solid{
+    color: var(--c_primary);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--c_black);
+    text-shadow: 1px 1px 0px var(--c_black);
+}
+i.fa-solid.icon_normal{
+    -webkit-text-stroke-width: none;
+    -webkit-text-stroke-color: none;
+    text-shadow: none;
+}
 /* banner */
 .banner_slider {}
 
@@ -154,7 +168,7 @@ body {
 
 .wishlist_btn {
     padding: 0.2857rem;
-    font-size: 1.7143rem;
+    font-size: 1.25rem;
     line-height: 1;
     background-color: var(--bg_white);
     border: none;
@@ -169,16 +183,12 @@ body {
     top: 0.7143rem;
     right: 0.7143rem;
 }
-
-.add_wishlist .icon_heart-fill,
-.add_wishlist.added_wishlist .icon_heart {
-    display: none;
+.add_wishlist i{
+    color: var(--c_white);
 }
-
-.add_wishlist.added_wishlist .icon_heart-fill {
-    display: inline-block;
+.add_wishlist.added_wishlist i{
+    color: var(--c_primary);
 }
-
 .btn_circle {
     padding: 0.2857rem;
     font-size: 1.7143rem;
@@ -609,5 +619,11 @@ body {
 
 .share_opt img {
     height: 4.2em;
+}
+
+.icon_d{
+    color: #FFCF01;
+  text-shadow: 1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black,-1px 1px 0px black,0.5px 0.5px 0px black,0.5px -0.5px 0px black,-0.5px -0.5px 0px black,-0.5px 0.5px 0px black;
+  filter: drop-shadow(1px 1px 0px black);
 }
 /* .............. end voucher details page .............. */

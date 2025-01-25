@@ -38,8 +38,19 @@ $(document).ready(function(){
         autoplayTimeout: 3000
     });
 
+    // add wishlist button
+    $(".add_wishlist").click(function(){
+        if($(this).hasClass("added_wishlist")){
+            $(this).removeClass("added_wishlist");
+            // show_bottom_toast("Removed from Cart");
+        }else{
+            $(this).addClass("added_wishlist");
+            show_top_toast("Added to Wishlist");
+        }
+    });
+
     // announce modal open
-    $("#announceModal").modal("show");
+    // $("#announceModal").modal("show");
 
     /* ---------------------------- end home page ---------------------------- */
 })
