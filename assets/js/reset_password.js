@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start reset password page ---------------------------- */
+    /* ----------------- start reset password page ----------------- */
     $("#reset_passwordform").validate({
         rules: {
             newPassword: {
@@ -39,5 +39,5 @@ $(document).ready(function(){
         var uniqueSymbols = value.match(symbols);
         return uniqueSymbols && uniqueSymbols.length >= 1;
     }, "Password must be at least 6 characters with alphanumeric characters and at least one unique symbol.");
-    /* ---------------------------- end reset password page ---------------------------- */
+    /* ----------------- end reset password page ----------------- */
 })

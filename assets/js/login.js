@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start login page ---------------------------- */
+    /* ----------------- start login page ----------------- */
     $("#login_form").validate({
         rules: {
             username: {
@@ -38,5 +38,5 @@ $(document).ready(function(){
     $.validator.addMethod("notOnlySpaces", function(value, element) {
         return value.trim().length > 0; 
     }, "This field cannot be empty.");
-    /* ---------------------------- end login page ---------------------------- */
+    /* ----------------- end login page ----------------- */
 })

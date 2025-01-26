@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start home page ---------------------------- */
+    /* ----------------- start home page ----------------- */
     
     // search input
     $(".top_searchBtn").click(function(){
@@ -52,5 +52,5 @@ $(document).ready(function(){
     // announce modal open
     // $("#announceModal").modal("show");
 
-    /* ---------------------------- end home page ---------------------------- */
+    /* ----------------- end home page ----------------- */
 })

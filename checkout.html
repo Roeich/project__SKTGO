@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Checkout</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- ___________________ start header area ___________________ -->
+    <!-- top header -->
+    <div class="position-absolute top-0 start-0 w-100 z-3 py-2">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="ms-auto">
+                    <a class="top_btn position-relative" href="cart.html">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <div class="position-absolute top-0 end-0 pe-2">
+                            <span class="fs_8 badge bg_danger rounded-pill">2</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert top toast -->
+    <div class="toast-container top_toast_container">
+        <div class="toast align-items-center toast_dark" id="topToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="1000">
+            <div class="toast-body p-0">
+                Added to Wishlist
+            </div>
+        </div>
+    </div>
+    <!-- alert bottom toast -->
+    <div class="toast-container bottom_toast_container">
+        <div class="toast align-items-center toast_dark" id="bottomToast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="1000">
+            <div class="toast-body p-0">
+                Added to Cart
+            </div>
+        </div>
+    </div>
+
+    <!-- ___________________ start header area ___________________ -->
+
+    <!-- ___________________ start main area ___________________ -->
+    <main class="main main_pb">
+        <!-- start voucher details section -->
+        <section>
+
+            <!-- banner image -->
+            <div class="banner_imgBox">
+                <img class="img-fluid w-100" src="assets/img/voucher/banner.jpg" alt="banner">
+            </div>
+
+            <!-- countdown row -->
+            <div class="py_12 flash_sale_bg">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="fs_16 text_outline mb-0">Flash Sale E-voucher <i class="fa-solid fa-bolt"></i>
+                        </h2>
+                        <div class="ps-2">
+                            <span id="flash_sale_countdown" class="fw-bold countdown" data-date="2025/01/15">00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- details area -->
+            <div class="container">
+                <!-- action bar -->
+                <div class="py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="pe-2">
+                            <span class="badge bg-black me-2"><i class="fa-solid fa-ticket-simple"></i>
+                                E-Voucher</span>
+                            <span class="c_danger"><i class="fa-solid fa-arrow-trend-down icon_normal c_danger"></i> 5 Left</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-light wishlist_btn add_wishlist" type="button">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                            <button class="btn btn-light btn_circle" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- share modal -->
+                    <div class="modal fade modal__bottom" id="shareModal" tabindex="-1" aria-labelledby="shareModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title fs_20" id="shareModalLabel">Share Voucher</h5>
+                                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4 pt-0 overflow-x-hidden">
+                                    <div class="d-flex pb-3 mb-3 border_bottom_dashed">
+                                        <div style="width: 48px;">
+                                            <div class="imgBox_1x1">
+                                                <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="ps-2 flex-grow-1">
+                                            <h6 class="fs_16 ff_inter">Voucher Name</h6>
+                                            <div class="mb-1">
+                                                <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                                <span>Precious Billiard</span>
+                                            </div>
+                                            <div class="">
+                                                <i class="fa-solid fa-ticket-simple"></i>
+                                                <span>Hotel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="share_opts">
+                                        <button class="share_opt text-center copy__link" data-clipboard-action="copy" data-clipboard-text="https://www.google.com/">
+                                            <i class="fa-solid fa-link"></i>
+                                            <div>Salin Link</div>
+                                        </button>
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-facebook"></i>
+                                            <div>Facebook</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                            <div>Whatsapp</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                            <div>Twitter</div>
+                                        </a>
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-instagram"></i>
+                                            <div>Instagram</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- details -->
+                <div class="pb-3 border_bottom_dashed">
+                    <h2 class="fs_18 mb-2">Japanese Festival</h2>
+                    <p class="mb_12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit</p>
+                    <div class="d-inline-block p-2 rounded_6 bg-light">
+                        <div class="c_gray">
+                            <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                            <span>Precious Billiard</span> |
+                            <i class="fa-solid fa-ticket-simple"></i>
+                            <span>Hotel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- location -->
+                <div class="py-3 border_bottom_dashed">
+                    <div class="map_wrapper mb-3">
+                        <iframe class="map_box"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.0506074257!2d-74.30916781042566!3d40.69719335017224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1736930075959!5m2!1sen!2sbd"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a class="map_link" href="#">
+                            <i class="fa-solid fa-location-arrow"></i> <span class="fs_10">Open Maps</span>
+                        </a>
+                    </div>
+                    <h2 class="fs_18 mb-2">Hotel Ampera Fatmawati</h2>
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-solid fa-location-dot c_white"></i>
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                            <p class="mb-2">Jl. Gerbang Pemuda No.3, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota
+                                Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- terms & conditions -->
+                <div class="py-3">
+                    <h2 class="fs_18 mb-2">Terms & Conditions</h2>
+                    <p class="mb-2">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <ul>
+                        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. </li>
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. </li>
+                        <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</li>
+                        <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- bottom action row -->
+            <div class="position-fixed start-0 bottom-0 w-100 bg-white border-top">
+                <div class="container">
+                    <!--  -->
+                    <div class="py-2">
+                        <button class="form-select fs_12 d-flex paymentMethod_btn form-select" type="button" data-bs-toggle="modal" data-bs-target="#paymentMethod_modal">
+                            Select Payment
+                        </button>
+
+                        <div class="modal fade modal__bottom" id="paymentMethod_modal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header px-4">
+                                        <h5 class="modal-title fs_md c_secondary">Select Payment</h5>
+                                        <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body p-4 pt-0">
+
+                                        <div class="pt-3 mb-3">
+                                            <h6 class="fs_14 fw-bold mb-3">Transfer Bank</h6>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="qris">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/qris.png" alt="qris">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Qris</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="bni">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/bni.png" alt="bni">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">BNI</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="mandiri">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/mandiri.png" alt="mandiri">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Mandiri</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="qris">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/qris.png" alt="qris">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Qris</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="maybank">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/maybank.png" alt="maybank">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Maybank</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="cimb">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/cimb.png" alt="cimb">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">CIMB</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="danamon">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/danamon.png" alt="danamon">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Danamon</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="permata">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/permata.png" alt="permata">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Permata</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="pt-3 border-top ">
+                                            <h6 class="fs_14 fw-bold mb-3">E-wallet</h6>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="gopay">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/gopay.png" alt="gopay">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Gopay</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="shopeepay">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/shopeepay.png" alt="Shopeepay">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Shopeepay</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label class="payment_method">
+                                                <input class="d-none" type="radio" name="payment_method" value="ovo">
+                                                <div class="payment_methodBox">
+                                                    <div>
+                                                        <img class="payment_methodIcon" src="assets/icons/ovo.png" alt="ovo">
+                                                    </div>
+                                                    <div>
+                                                        <div class="payment_methodName">Ovo</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="collapse" id="collapseDetailPayment">
+                        <div class="py-2 border-top">
+                            <div class="fw-semibold border-bottom pb-2 mb-1">Detail Payment</div>
+                            <div class="fs_12 d-flex justify-content-between mb-1">
+                                <div>Ticket Price</div>
+                                <div class="fw-semibold">2.000.000</div>
+                            </div>
+                            <div class="fs_12 d-flex justify-content-between">
+                                <div>Discount</div>
+                                <div class="fw-semibold c_danger">1.000.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="d-flex justify-content-between align-items-center py-2 border-top" data-bs-toggle="collapse" data-bs-target="#collapseDetailPayment" aria-expanded="false" aria-controls="collapseDetailPayment">
+                        <div class="pe-2">
+                            <div class="fs_12">
+                                Total (2) <span class="c_gray">Save</span> <span class="c_danger">Rp 1jt</span>
+                            </div>
+                            <div class="fs_14 fw-bold">Rp 2.000.000 <i class="fa-solid fa-chevron-up icon_normal c_dark"></i></div>
+                        </div>
+                        <div>
+                            <button class="btn btn_sm btn_shadow btn_primary rounded-pill ms-1" type="submit">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end voucher details section -->
+
+    </main>
+    <!-- ___________________ end main area ___________________ -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <!--  -->
+    <script src="assets/js/checkout.js"></script>
+</body>
+
+</html>

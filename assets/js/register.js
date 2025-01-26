@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start register page ---------------------------- */
+    /* ----------------- start register page ----------------- */
     $("#agree_privacyPolicy").click(function() {
         $(".privacy_policyInp").prop("checked", true);
         $(".privacy_policyInp").change();
@@ -105,5 +105,5 @@ $(document).ready(function(){
             */
         }
     });
-    /* ---------------------------- end register page ---------------------------- */
+    /* ----------------- end register page ----------------- */
 })

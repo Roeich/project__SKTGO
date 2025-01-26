@@ -52,18 +52,6 @@ body {
 .main {
     background-color: var(--bg_white);
 }
-i.fa-solid{
-    color: var(--c_primary);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--c_black);
-    text-shadow: 1px 1px 0px var(--c_black);
-}
-i.fa-solid.icon_normal{
-    color: var(--c_dark);
-    -webkit-text-stroke-width: 0px;
-    -webkit-text-stroke-color: none;
-    text-shadow: none;
-}
 /* banner */
 .banner_slider {}
 
@@ -192,7 +180,7 @@ i.fa-solid.icon_normal{
 }
 .btn_circle {
     padding: 0.2857rem;
-    font-size: 1.7143rem;
+    font-size: 1.25rem;
     line-height: 1;
     background-color: var(--bg_white);
     border: none;
@@ -618,13 +606,70 @@ i.fa-solid.icon_normal{
             transform: scale(0.9);
 }
 
-.share_opt img {
-    height: 4.2em;
+.share_opt i {
+   font-size: 3.2em;
+   margin-bottom: 0.2em;
 }
 
 .icon_d{
-    color: #FFCF01;
+    color: var(--c_primary);
   text-shadow: 1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black,-1px 1px 0px black,0.5px 0.5px 0px black,0.5px -0.5px 0px black,-0.5px -0.5px 0px black,-0.5px 0.5px 0px black;
   filter: drop-shadow(1px 1px 0px black);
 }
 /* .............. end voucher details page .............. */
+
+/* .............. start checkout page .............. */
+
+.payment_methodInp {
+    text-align: start;
+    color: var(--c_secondary);
+}
+
+.payment_method{
+    display: block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.payment_method:hover{
+    background-color: var(--bg_light_2);
+}
+.payment_methodBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.payment_methodIcon {
+    width: 46px;
+    min-width: 46px;
+    height: 18px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+.payment_methodInp .payment_methodIcon {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    margin-right: 4px;
+}
+
+.payment_methodInp p {
+    line-height: 1.4;
+}
+
+.payment_methodInp span {
+    display: none;
+}
+
+span.error:not(input) {
+    padding-top: 3px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--c_danger);
+}
+/* .............. end checkout page .............. */

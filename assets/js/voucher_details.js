@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start voucher details page ---------------------------- */
+    /* ----------------- start voucher details page ----------------- */
     // flash sale countdown
     $("#flash_sale_countdown").countdown($("#flash_sale_countdown").attr("data-date"), function(event) {
         var $this = $(this).html(event.strftime(''
@@ -45,5 +45,5 @@ $(document).ready(function(){
         var toast = new bootstrap.Toast(toastElement);
         toast.show(); 
     }
-    /* ---------------------------- end voucher details page ---------------------------- */
+    /* ----------------- end voucher details page ----------------- */
 })

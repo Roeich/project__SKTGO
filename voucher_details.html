@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/icons.css">
 </head>
 
 <body>
@@ -81,15 +80,14 @@
                         <div class="pe-2">
                             <span class="badge bg-black me-2"><i class="fa-solid fa-ticket-simple"></i>
                                 E-Voucher</span>
-                            <span class="c_danger"><i class="fs_16 icon icon_graph-down-arrow"></i> 5 Left</span>
+                            <span class="c_danger"><i class="fa-solid fa-arrow-trend-down icon_normal c_danger"></i> 5 Left</span>
                         </div>
                         <div>
                             <button class="btn btn-light wishlist_btn add_wishlist" type="button">
-                                <i class="icon icon_heart"></i>
-                                <i class="icon icon_heart-fill"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </button>
                             <button class="btn btn-light btn_circle" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                <i class="icon icon_reply-fill"></i>
+                                <i class="fa-solid fa-share"></i>
                             </button>
                         </div>
                     </div>
@@ -102,11 +100,11 @@
                                     <h5 class="modal-title fs_20" id="shareModalLabel">Share Voucher</h5>
                                     <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body p-4 pt-0">
+                                <div class="modal-body p-4 pt-0 overflow-x-hidden">
                                     <div class="d-flex pb-3 mb-3 border_bottom_dashed">
                                         <div style="width: 48px;">
                                             <div class="imgBox_1x1">
-                                                <img src="assets/img/voucher/banner.jpg" alt="">
+                                                <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="ps-2 flex-grow-1">
@@ -116,30 +114,30 @@
                                                 <span>Precious Billiard</span>
                                             </div>
                                             <div class="">
-                                                <i class="fs_20 icon icon_ticket-fill"></i>
+                                                <i class="fa-solid fa-ticket-simple"></i>
                                                 <span>Hotel</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="share_opts">
                                         <button class="share_opt text-center copy__link" data-clipboard-action="copy" data-clipboard-text="https://www.google.com/">
-                                            <img class="mb-2" src="assets/icons/link.svg" alt="link">
+                                            <i class="fa-solid fa-link"></i>
                                             <div>Salin Link</div>
                                         </button>
-                                        <a class="share_opt text-center" href="#">
-                                            <img class="mb-2" target="_blank" src="assets/icons/facebook.svg" alt="facebook">
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-facebook"></i>
                                             <div>Facebook</div>
                                         </a>
-                                        <a class="share_opt text-center" href="#">
-                                            <img class="mb-2" target="_blank" src="assets/icons/whatsapp.svg" alt="whatsapp">
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-whatsapp"></i>
                                             <div>Whatsapp</div>
                                         </a>
-                                        <a class="share_opt text-center" href="#">
-                                            <img class="mb-2" target="_blank" src="assets/icons/twitter.svg" alt="twitter">
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-x-twitter"></i>
                                             <div>Twitter</div>
                                         </a>
-                                        <a class="share_opt text-center" href="#">
-                                            <img class="mb-2" target="_blank" src="assets/icons/instagram.svg" alt="instagram">
+                                        <a class="share_opt text-center" href="#" target="_blank">
+                                            <i class="fa-brands fa-instagram"></i>
                                             <div>Instagram</div>
                                         </a>
                                     </div>
@@ -158,7 +156,7 @@
                         <div class="c_gray">
                             <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
                             <span>Precious Billiard</span> |
-                            <i class="fs_20 icon icon_ticket-fill"></i>
+                            <i class="fa-solid fa-ticket-simple"></i>
                             <span>Hotel</span>
                         </div>
                     </div>
@@ -172,13 +170,13 @@
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <a class="map_link" href="#">
-                            <i class="icon icon_cursor-fill"></i> <span class="fs_10">Open Maps</span>
+                            <i class="fa-solid fa-location-arrow"></i> <span class="fs_10">Open Maps</span>
                         </a>
                     </div>
                     <h2 class="fs_18 mb-2">Hotel Ampera Fatmawati</h2>
                     <div class="d-flex">
                         <div>
-                            <i class="fs_20 icon icon_geo-mark"></i>
+                            <i class="fa-solid fa-location-dot c_white"></i>
                         </div>
                         <div class="flex-grow-1 ps-2">
                             <p class="mb-2">Jl. Gerbang Pemuda No.3, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota
@@ -218,8 +216,7 @@
                         </div>
                         <div>
                             <button class="btn addCart_btn btn_shadow rounded-pill add_cart" type="button">
-                                <i class="icon icon_cart-plus-fill"></i>
-                                <i class="icon icon_cart-plus"></i>
+                                <i class="fa-solid fa-cart-plus"></i>
                             </button>
                             <a class="btn btn_sm btn_shadow btn_primary rounded-pill ms-1" href="checkout.html">Buy
                                 Now</a>

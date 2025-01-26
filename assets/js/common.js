@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start common functionality ---------------------------- */
+    /* ----------------- start common functionality ----------------- */
     // password toggle functionality
     $(".pwd_tglBtn").click(function() {
         const parentWrapper = $(this).parents(".pwd_inpItem");
@@ -13,5 +13,5 @@ $(document).ready(function(){
             $(inpItem).attr("type", "password");
         }
     });
-    /* ---------------------------- end common functionality ---------------------------- */
+    /* ----------------- end common functionality ----------------- */
 })

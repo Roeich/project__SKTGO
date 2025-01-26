@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /* ---------------------------- start forgot password page ---------------------------- */
+    /* ----------------- start forgot password page ----------------- */
     $("#forgot_passwordForm").validate({
         rules: {
             email: {
@@ -18,5 +18,5 @@ $(document).ready(function(){
             form.submit(); 
         }
     });
-    /* ---------------------------- end forgot password page ---------------------------- */
+    /* ----------------- end forgot password page ----------------- */
 })
