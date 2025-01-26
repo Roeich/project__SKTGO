@@ -21,6 +21,9 @@ body {
 .top_btn i {
     font-size: 20px;
 }
+.top_btn.shadow-none{
+    box-shadow: none !important;
+}
 
 .top_searchBtn {
     padding: 8px 16px;
@@ -51,6 +54,7 @@ body {
 
 .main {
     background-color: var(--bg_white);
+    min-height: calc(100svh - 62px);
 }
 /* banner */
 .banner_slider {}
@@ -619,7 +623,12 @@ body {
 /* .............. end voucher details page .............. */
 
 /* .............. start checkout page .............. */
-
+.paymentMethod_btn{
+    padding-left: 3rem;
+    background-image: var(--bs-form-select-bg-img),url("../icons/CreditCard.png");
+    background-position: right .75rem center,left 0.5rem center;
+    background-size: 16px 12px, 1.5rem;
+}
 .payment_methodInp {
     text-align: start;
     color: var(--c_secondary);
@@ -671,5 +680,25 @@ span.error:not(input) {
     font-size: 12px;
     line-height: 1.4;
     color: var(--c_danger);
+}
+.num_inpGrp{
+    display: flex;
+}
+.num_inp{
+    border: none;
+    outline: none; 
+    width: 3rem;
+    text-align: center;
+}
+.num_inp::-webkit-outer-spin-button,
+.num_inp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.num_inp[type=number] {
+    -moz-appearance: textfield;
+}
+.num_inpGrp .btn{
+    padding:0.4em 0.8em;
 }
 /* .............. end checkout page .............. */
