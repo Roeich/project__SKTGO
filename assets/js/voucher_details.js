@@ -29,7 +29,7 @@ $(document).ready(function(){
     }
 
     // add cart button
-    $(".add_cart").click(function(){
+    $(".main:not(.soldout__main) .add_cart").click(function(){
         if($(this).hasClass("added_cart")){
             $(this).removeClass("added_cart");
             // show_bottom_toast("Removed from Cart");
@@ -45,5 +45,15 @@ $(document).ready(function(){
         var toast = new bootstrap.Toast(toastElement);
         toast.show(); 
     }
+
+    // sold out action prevent
+    $(".soldout__main .voucher_actRow .btn").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(".voucher_actRow .err_msg").addClass("d-block");
+        setTimeout(() => {
+            $(".voucher_actRow .err_msg").removeClass("d-block");
+        }, 2500);
+    });
     /* ----------------- end voucher details page ----------------- */
 })

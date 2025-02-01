@@ -35,25 +35,25 @@
     <!-- ___________________ start header area ___________________ -->
 
     <!-- ___________________ start main area ___________________ -->
-    <main class="main main_pb">
+    <main class="main main_pb bg_light3">
         <!-- start voucher details section -->
         <section>
             <form action="#" autocomplete="off">
                 <!-- voucher list -->
                 <div class="mb-5">
                     <!-- voucher item -->
-                    <div class="py-2 px-3 bg-white shadow-sm mb-2">
+                    <div class="voucher__item py-2 px-3 bg-white shadow-sm mt-2">
                         <div class="c_gray fs_10 mb-2 ">
                             <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
                             <span>Precious Billiard</span>
                         </div>
                         <div class="d-flex mb-1">
-                            <div style="width: 48px;">
+                            <div style="width: 72px;">
                                 <div class="imgBox_1x1">
                                     <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="ps-2 flex-grow-1">
+                            <div class="ps-2 pt-2 flex-grow-1">
                                 <h6 class="fs_16 ff_inter mb-1">
                                     <a class="text-decoration-none" href="voucher_details.html">
                                         Voucher Name
@@ -61,22 +61,22 @@
                                 </h6>
                                 <div class="">
                                     <i class="fa-solid fa-ticket-simple"></i>
-                                    <span>Hotel</span>
+                                    <span class="fs_12">Hotel</span>
                                     |
                                     <i class="fa-solid fa-arrow-trend-down icon_normal c_danger"></i> 
-                                    <span class="c_danger">5 Left</span>
+                                    <span class="fs_12 c_danger">5 Left</span>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="pe-2">
-                                <div><span class="fs_14 fw-bold">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span></div>
+                                <div><span class="fs_14 fw-bold current__price">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through actual__price">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span></div>
                                 
                             </div>
                             <div>
                                 <div class="form-group num_inpGrp">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm decrease" type="button">-</button>
-                                    <input class="num_inp" type="number" min="0" value="0">
+                                    <input class="num_inp voucher__count" type="number" min="0" value="1">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm increase" type="button">+</button>
                                 </div>
                             </div>
@@ -84,18 +84,18 @@
                     </div>
 
                     <!-- voucher item -->
-                    <div class="py-2 px-3 bg-white shadow-sm mb-2">
+                    <div class="voucher__item py-2 px-3 bg-white shadow-sm mt-2">
                         <div class="c_gray fs_10 mb-2 ">
                             <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
                             <span>Precious Billiard</span>
                         </div>
                         <div class="d-flex mb-1">
-                            <div style="width: 48px;">
+                            <div style="width: 72px;">
                                 <div class="imgBox_1x1">
                                     <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="ps-2 flex-grow-1">
+                            <div class="ps-2 pt-2 flex-grow-1">
                                 <h6 class="fs_16 ff_inter mb-1">
                                     <a class="text-decoration-none" href="voucher_details.html">
                                         Voucher Name
@@ -103,10 +103,10 @@
                                 </h6>
                                 <div class="">
                                     <i class="fa-solid fa-ticket-simple"></i>
-                                    <span>Hotel</span>
+                                    <span class="fs_12">Hotel</span>
                                     |
                                     <i class="fa-solid fa-arrow-trend-down icon_normal c_danger"></i> 
-                                    <span class="c_danger">5 Left</span>
+                                    <span class="fs_12 c_danger">5 Left</span>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                             <div>
                                 <div class="form-group num_inpGrp">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm decrease" type="button">-</button>
-                                    <input class="num_inp" type="number" min="0" value="0">
+                                    <input class="num_inp" type="number" min="0" value="1">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm increase" type="button">+</button>
                                 </div>
                             </div>
@@ -285,7 +285,7 @@
                             <div class="py-2 border-top">
                                 <div class="fw-semibold border-bottom pb-2 mb-1">Detail Payment</div>
                                 <div class="fs_12 d-flex justify-content-between mb-1">
-                                    <div>Ticket Price</div>
+                                    <div>Voucher Price</div>
                                     <div class="fw-semibold">2.000.000</div>
                                 </div>
                                 <div class="fs_12 d-flex justify-content-between">
@@ -295,8 +295,8 @@
                             </div>
                         </div>
                         <!--  -->
-                        <div class="d-flex justify-content-between align-items-center py-2 border-top" data-bs-toggle="collapse" data-bs-target="#collapseDetailPayment" aria-expanded="false" aria-controls="collapseDetailPayment">
-                            <div class="pe-2">
+                        <div class="d-flex justify-content-between align-items-center py-2 border-top">
+                            <div class="pe-2"  data-bs-toggle="collapse" data-bs-target="#collapseDetailPayment" aria-expanded="false" aria-controls="collapseDetailPayment">
                                 <div class="fs_12">
                                     Total (2) <span class="c_gray">Save</span> <span class="c_danger">Rp 1jt</span>
                                 </div>
@@ -325,7 +325,7 @@
     <script src="assets/js/jquery.countdown.min.js"></script>
     <script src="assets/js/common.js"></script>
     <!--  -->
-    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/voucher_checkout.js"></script>
 </body>
 
 </html>

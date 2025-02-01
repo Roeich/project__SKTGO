@@ -1,6 +1,6 @@
 /* .............. start home page .............. */
 body {
-    background-color: #F9F9F9;
+    background-color: var(--bg_light3);
 }
 
 .top_btn,
@@ -286,11 +286,14 @@ body {
 
 .text_outline {
     color: var(--c_white);
-    text-shadow:
+    /* text-shadow:
         -1px -1px 0 var(--c_black),
         1px -1px 0 var(--c_black),
         -1px 1px 0 var(--c_black),
-        1px 1px 0 var(--c_black);
+        1px 1px 0 var(--c_black); */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--c_black);
+    text-shadow: 1px 1px 0px var(--c_black);
 }
 
 .countdown {
@@ -620,9 +623,23 @@ body {
   text-shadow: 1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black,-1px 1px 0px black,0.5px 0.5px 0px black,0.5px -0.5px 0px black,-0.5px -0.5px 0px black,-0.5px 0.5px 0px black;
   filter: drop-shadow(1px 1px 0px black);
 }
+.err_msg{
+    color: var(--c_danger);
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    display: none;
+}
+.soldout__main i,
+.soldout__main .voucher_actRow .btn{
+    filter: grayscale(1);
+}
+.soldout__main #shareModal i,
+.soldout__main .err_msg i{
+    filter: grayscale(0);
+}
 /* .............. end voucher details page .............. */
 
-/* .............. start checkout page .............. */
+/* .............. start voucher checkout page .............. */
 .paymentMethod_btn{
     padding-left: 3rem;
     background-image: var(--bs-form-select-bg-img),url("../icons/CreditCard.png");
@@ -641,7 +658,7 @@ body {
     cursor: pointer;
 }
 .payment_method:hover{
-    background-color: var(--bg_light_2);
+    background-color: var(--bg_light2);
 }
 .payment_methodBox {
     display: -webkit-box;
@@ -701,4 +718,4 @@ span.error:not(input) {
 .num_inpGrp .btn{
     padding:0.4em 0.8em;
 }
-/* .............. end checkout page .............. */
+/* .............. end voucher checkout page .............. */

@@ -5,14 +5,28 @@ $(document).ready(function(){
         var input = $(this).siblings('.num_inp');
         var currentValue = parseInt(input.val());
         input.val(currentValue + 1);
+        reCalculatePrice();
     });
     $('.decrease').click(function() {
         var input = $(this).siblings('.num_inp');
         var currentValue = parseInt(input.val());
         if (currentValue > 0) {
             input.val(currentValue - 1);
+            reCalculatePrice();
         }
     });
+
+    function reCalculatePrice(){
+        const totalPrice=0;
+        const discountPrice=0;
+        // run loop for all items
+        $(".voucher__item").each((ind,elm)=>{
+            console.log(elm);
+        })
+        // multiple with it's price and number
+
+        // show total price and discount
+    }
 
     // control payment method modal
     $(".payment_method input").each((ind, elm) => {

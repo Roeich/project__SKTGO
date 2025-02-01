@@ -70,7 +70,8 @@
     --bg_gray: #ADA4A5;
     --bg_success: #00A54C;
     --bg_light: #fafafa;
-    --bg_light_2: #f1f1f1;
+    --bg_light2: #f1f1f1;
+    --bg_light3: #F9F9F9;
     --bg_white: #ffffff;
 
     --ff_Inter:"Inter", serif;
@@ -175,7 +176,8 @@ i.fa-brands.icon_normal{
 .bg_gray {background-color: var(--bg_gray);}
 .bg_success {background-color: var(--bg_success);}
 .bg_light {background-color: var(--bg_light);}
-.bg_light_2 {background-color: var(--bg_light_2);}
+.bg_light2 {background-color: var(--bg_light2);}
+.bg_light3 {background-color: var(--bg_light3) !important;}
 .bg_white {background-color: var(--bg_white);}
 
 .ff_Inter{font-family: var(--ff_Inter);}
@@ -202,6 +204,8 @@ i.fa-brands.icon_normal{
 .fs_36{font-size: var(--fs_36);}
 .fs_40{font-size: var(--fs_40);}
 .fs_54{font-size: var(--fs_54);}
+
+.fw_black {font-weight: 900;}
 
 .p_10{padding: var(--p_10);}
 .p_12{padding: var(--p_12);}
