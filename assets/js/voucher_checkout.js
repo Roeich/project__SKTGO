@@ -17,15 +17,30 @@ $(document).ready(function(){
     });
 
     function reCalculatePrice(){
-        const totalPrice=0;
-        const discountPrice=0;
-        // run loop for all items
-        $(".voucher__item").each((ind,elm)=>{
-            console.log(elm);
-        })
-        // multiple with it's price and number
+        let totalPrice=0;
+        let totalDiscountPrice=0;
+        let totalItems=0;
 
-        // show total price and discount
+        $(".prd__item").each((ind,prdItem)=>{
+            let quantity=parseFloat($(prdItem).find(".quantity").val());
+            let currentPrice=parseFloat($(prdItem).find("[data-current-price]").attr("data-current-price"));
+            let actualPrice=parseFloat($(prdItem).find("[data-actual-price]").attr("data-actual-price"));
+            
+            let discountPrice=0;
+
+            if(!Number.isNaN(actualPrice)){
+                discountPrice=actualPrice-currentPrice;
+            }
+            
+            totalPrice+=(currentPrice*quantity);
+            totalDiscountPrice+=(discountPrice*quantity);
+            totalItems+=quantity;
+        });
+
+        
+        $('[data-preview="totalPrice"').text(totalPrice);
+        $('[data-preview="totalDiscount"').text(totalDiscountPrice);
+        $('[data-preview="totalItems"').text(totalItems);
     }
 
     // control payment method modal
