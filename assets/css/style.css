@@ -21,7 +21,8 @@ body {
 .top_btn i {
     font-size: 20px;
 }
-.top_btn.shadow-none{
+
+.top_btn.shadow-none {
     box-shadow: none !important;
 }
 
@@ -56,6 +57,7 @@ body {
     background-color: var(--bg_white);
     min-height: calc(100svh - 62px);
 }
+
 /* banner */
 .banner_slider {}
 
@@ -176,12 +178,15 @@ body {
     top: 0.7143rem;
     right: 0.7143rem;
 }
-.add_wishlist i{
+
+.add_wishlist i {
     color: var(--c_white);
 }
-.add_wishlist.added_wishlist i{
+
+.add_wishlist.added_wishlist i {
     color: var(--c_primary);
 }
+
 .btn_circle {
     padding: 0.2857rem;
     font-size: 1.25rem;
@@ -537,7 +542,8 @@ body {
     font-size: var(--fs_20);
     padding: 0.2em 0.6em;
 }
-.addCart_btn.added_cart{
+
+.addCart_btn.added_cart {
     background-color: var(--bg_secondary);
 }
 
@@ -550,7 +556,7 @@ body {
     display: inline-block;
 }
 
-.top_toast_container{
+.top_toast_container {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -558,7 +564,8 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
-.bottom_toast_container{
+
+.bottom_toast_container {
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -566,6 +573,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
+
 .toast_dark {
     color: var(--c_white);
     border-radius: 50rem;
@@ -575,16 +583,20 @@ body {
     background: var(--bg_secondary);
     margin: auto;
 }
-.toast{
+
+.toast {
     transition: 0.3s;
     transform: translateY(0px);
 }
-.top_toast_container .toast{
+
+.top_toast_container .toast {
     transform: translateY(20px);
 }
-.bottom_toast_container .toast{
+
+.bottom_toast_container .toast {
     transform: translateY(-70px);
 }
+
 .share_opts {
     display: -ms-grid;
     display: grid;
@@ -609,57 +621,64 @@ body {
 
 .share_opt:active {
     -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-            transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .share_opt i {
-   font-size: 3.2em;
-   margin-bottom: 0.2em;
+    font-size: 3.2em;
+    margin-bottom: 0.2em;
 }
 
-.icon_d{
+.icon_d {
     color: var(--c_primary);
-  text-shadow: 1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black,-1px 1px 0px black,0.5px 0.5px 0px black,0.5px -0.5px 0px black,-0.5px -0.5px 0px black,-0.5px 0.5px 0px black;
-  filter: drop-shadow(1px 1px 0px black);
+    text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black, -1px 1px 0px black, 0.5px 0.5px 0px black, 0.5px -0.5px 0px black, -0.5px -0.5px 0px black, -0.5px 0.5px 0px black;
+    filter: drop-shadow(1px 1px 0px black);
 }
-.err_msg{
+
+.err_msg {
     color: var(--c_danger);
     font-weight: 600;
     margin-bottom: 0.3em;
     display: none;
 }
+
 .soldout__main i,
-.soldout__main .voucher_actRow .btn{
+.soldout__main .voucher_actRow .btn {
     filter: grayscale(1);
 }
+
 .soldout__main #shareModal i,
-.soldout__main .err_msg i{
+.soldout__main .err_msg i {
     filter: grayscale(0);
 }
+
 /* .............. end voucher details page .............. */
 
 /* .............. start voucher checkout page .............. */
-.paymentMethod_btn{
+.paymentMethod_btn {
     padding-left: 3rem;
-    background-image: var(--bs-form-select-bg-img),url("../icons/CreditCard.png");
-    background-position: right .75rem center,left 0.5rem center;
+    background-image: var(--bs-form-select-bg-img), url("../icons/CreditCard.png");
+    background-position: right .75rem center, left 0.5rem center;
     background-size: 16px 12px, 1.5rem;
 }
+
 .payment_methodInp {
     text-align: start;
     color: var(--c_secondary);
 }
 
-.payment_method{
+.payment_method {
     display: block;
     padding: 0.5rem 0.8rem;
     border-radius: 0.3rem;
     cursor: pointer;
 }
-.payment_method:hover{
+
+.payment_method:hover {
     background-color: var(--bg_light2);
 }
+
 .payment_methodBox {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -668,6 +687,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
 }
+
 .payment_methodIcon {
     width: 46px;
     min-width: 46px;
@@ -698,24 +718,81 @@ span.error:not(input) {
     line-height: 1.4;
     color: var(--c_danger);
 }
-.num_inpGrp{
+
+.num_inpGrp {
     display: flex;
 }
-.num_inp{
+
+.num_inp {
     border: none;
-    outline: none; 
+    outline: none;
     width: 3rem;
     text-align: center;
 }
+
 .num_inp::-webkit-outer-spin-button,
 .num_inp::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 .num_inp[type=number] {
     -moz-appearance: textfield;
 }
-.num_inpGrp .btn{
-    padding:0.4em 0.8em;
+
+.num_inpGrp .btn {
+    padding: 0.4em 0.8em;
 }
+
 /* .............. end voucher checkout page .............. */
+
+/* .............. start event details page page .............. */
+.calendar_badge {
+    border-radius: 10px;
+    border: 1px solid #EDEDED;
+    padding: 8px;
+    display: flex;
+    height: 36px;
+    align-items: center;
+    gap: 4px;
+}
+
+.instagram_logo {
+    border: 1px solid var(--c_secondary);
+    border-radius: 10px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_button {
+    background-color: var(--bg_primary);
+    border-radius: 10px;
+    height: 36px;
+    gap: 6px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket_item{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    justify-content: space-between;
+    gap: 8px;
+    border: 1px solid #EDEDED;
+}
+.icon_box{
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg_light3);
+}
+/* .............. end event details page page .............. */

@@ -50,7 +50,7 @@
     <!-- ___________________ start header area ___________________ -->
 
     <!-- ___________________ start main area ___________________ -->
-    <main class="main main_pb soldout__main">
+    <main class="main main_pb">
         <!-- start voucher details section -->
         <section>
 
@@ -59,28 +59,15 @@
                 <img class="img-fluid w-100" src="assets/img/voucher/banner.jpg" alt="banner">
             </div>
 
-            <!-- countdown row -->
-            <div class="py-2 flash_sale_bg">
-                <div class="container">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h2 class="fs_16 text_outline fw_black mb-0">Flash Sale E-voucher <i class="fa-solid fa-bolt"></i>
-                        </h2>
-                        <div class="ps-2">
-                            <span id="flash_sale_countdown" class="fw-bold countdown" data-date="2025/05/15">00:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- details area -->
             <div class="container">
                 <!-- action bar -->
                 <div class="py-2">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="pe-2">
-                            <span class="badge bg-black me-2"><i class="fa-solid fa-ticket-simple"></i>
-                                E-Voucher</span>
-                            <span class="c_danger">Sold Out</span>
+                            <span class="badge bg-black me-2"><i class="fa-solid fa-palette"></i>
+                                Event</span>
+                            <span class="c_danger"><i class="fa-solid fa-arrow-trend-down icon_normal c_danger"></i> 5 Left</span>
                         </div>
                         <div>
                             <button class="btn btn-light wishlist_btn add_wishlist" type="button">
@@ -153,11 +140,11 @@
                     <p class="mb_12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit</p>
                     <div class="d-inline-block p-2 rounded_6 bg-light">
-                        <div class="c_gray">
+                        <div class="">
                             <img class="fs_20 inline_img" src="assets/img/home/billiard.png" alt="billiard">
                             <span>Precious Billiard</span> |
-                            <i class="fa-solid fa-ticket-simple"></i>
-                            <span>Hotel</span>
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Entertainment</span>
                         </div>
                     </div>
                 </div>
@@ -174,7 +161,7 @@
                         </a>
                     </div>
                     <h2 class="fs_16 mb-2">Hotel Ampera Fatmawati</h2>
-                    <div class="d-flex">
+                    <div class="d-flex mb-3">
                         <div>
                             <i class="fa-solid fa-location-dot c_white"></i>
                         </div>
@@ -183,11 +170,46 @@
                                 Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-between">
+
+                        <div class="calendar_badge">
+                            <i class="fa-solid fa-calendar fs_16"></i>
+                            <span class="c_secondary fs_14">Open: 09.00 - 21.00</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="instagram_logo text-decoration-none">
+                                <i class="fa-brands fa-instagram fs_20"></i>
+                            </a>
+                            <a href="#" class="contact_button text-decoration-none">
+                                <i class="fa-solid fa-phone fs_12 c_white"></i>
+                                <span class="c_secondary fs_xsm fw-bold">Contact</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket -->
+                <div class="py-3 border_bottom_dashed">
+                    <h2 class="fs_16 mb-2">Ticket</h2>
+                    <div class="ticket_item">
+                        <div class="icon_box">
+                            <i class="fa-solid fa-ticket-simple"></i>
+                        </div>
+                        <div>
+                            <div class="fs_14 fw-semibold">Daily Ticket</div>
+                            <div class="fs_10 c_gray">1 day</div>
+                        </div>
+                        <div class="ms-auto text-end">
+                            <div><span class="fs_10 c_gray text-decoration-line-through">Rp 2.000.000</span></div>
+                            <div class="fs_14 fw-bold">Rp 1.000.000 <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- terms & conditions -->
                 <div class="py-3">
-                    <h2 class="fs_16 mb-2">Terms & Conditions</h2>
+                    <h2 class="fs_18 mb-2">Terms & Conditions</h2>
                     <p class="mb-2">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
@@ -241,7 +263,7 @@
     <script src="assets/js/jquery.countdown.min.js"></script>
     <script src="assets/js/common.js"></script>
     <!--  -->
-    <script src="assets/js/voucher_details.js"></script>
+    <script src="assets/js/event_details.js"></script>
 </body>
 
 </html>
