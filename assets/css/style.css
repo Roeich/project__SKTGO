@@ -795,4 +795,65 @@ span.error:not(input) {
     place-items: center;
     background-color: var(--bg_light3);
 }
+.modal__bottom .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal__bottom .flatpickr-calendar.open,
+.modal__bottom .flatpickr-calendar.inline {
+    border-radius: 0px;
+    width: 100%;
+    max-height: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.modal__bottom .flatpickr-rContainer,
+.modal__bottom .flatpickr-days {
+    width: 100%;
+}
+
+.modal__bottom .dayContainer {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.modal__bottom .flatpickr-day {
+    max-width: 14.2857143%;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+    background: var(--bg_primary);
+    border-color: var(--bg_primary);
+}
+
+.datePicker_btn {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    background-image: url("../icons/CalendarDots.svg");
+    background-repeat: no-repeat;
+    background-position: left 0.5em center;
+    background-size: 1.3em;
+    padding-left: 2em;
+    
+}
+
 /* .............. end event details page page .............. */

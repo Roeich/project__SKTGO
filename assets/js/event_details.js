@@ -55,5 +55,27 @@ $(document).ready(function(){
             $(".voucher_actRow .err_msg").removeClass("d-block");
         }, 2500);
     });
+
+
+    // datepicker
+    $("#datePicker").flatpickr({
+        inline: true,
+        disableMobile: false,
+        dateFormat: "d-m-Y",
+        minDate: "2025-02-03", // format: Y-m-d
+        maxDate: "2025-05-20",
+        altInput: true,
+        altFormat: "d M Y",
+        onChange: function(selectedDates, dateStr, instance) {
+           const altInputValue = instance.altInput.value; 
+        //    $(".datePicker_btn").text(altInputValue);
+           $("#datePicker_modal").modal("hide");
+           $("#formSubmit_modal").modal("show");
+
+           // load data and show price
+           $("#ticket_form").addClass("show_options");
+        }
+    });
+
     /* ----------------- end voucher details page ----------------- */
 })
