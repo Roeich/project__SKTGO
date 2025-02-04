@@ -746,7 +746,7 @@ span.error:not(input) {
 
 /* .............. end voucher checkout page .............. */
 
-/* .............. start event details page page .............. */
+/* .............. start event details page .............. */
 .calendar_badge {
     border-radius: 10px;
     border: 1px solid #EDEDED;
@@ -875,4 +875,8 @@ span.error:not(input) {
     pointer-events: none;
 }
 
-/* .............. end event details page page .............. */
+/* .............. end event details page .............. */
+
+/* .............. start profile page .............. */
+
+/* .............. end profile page .............. */
