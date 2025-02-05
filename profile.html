@@ -41,7 +41,7 @@
 
     <!-- top header -->
     <div class="fixed-top py-2">
-        <div class="container">
+        <div class="container px_20">
             <div class="d-flex align-items-center">
                 <div class="pe-3 flex-grow-1">
                     <h1 class="fs_20 mb-0">Profile</h1>
@@ -60,12 +60,44 @@
     <!-- ___________________ start header area ___________________ -->
 
     <!-- ___________________ start main area ___________________ -->
-    <main class="main main_pt">
+    <main class="main main_pt pfl_main">
 
-        <!-- start Available Event section -->
         <section class="py-4">
-            <div class="container">
-                <div>
+            <div class="container px_20">
+                <div class="d-flex align-items-center gap-3 mb_24">
+                    <div>
+                        <img class="pfl_img" src="assets/img/profile/profile.png" alt="profile">
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="fs_16 fw-semibold">Marcell Goldwin</div>
+                        <div>
+                            <span class="badge bg_dangerLt">New User</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb_16">
+                    <div class="row gx-3">
+                        <div class="col-6">
+                            <a class="btn pfl_actBtn" href="wishlist.html">
+                                <div><i class="fa-solid fa-heart"></i></div>
+                                <div>Wishlist</div>
+                                <div class="ms-auto">
+                                    <span class="badge bg_danger rounded-pill">6</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn pfl_actBtn" href="cart.html">
+                                <div><i class="fa-solid fa-cart-plus"></i></div>
+                                <div>Cart</div>
+                                <div class="ms-auto">
+                                    <span class="badge bg_danger rounded-pill">8</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb_24">
                     <div class="survey_info_card">
                         <div class="">
                             <i class="fa-solid fa-piggy-bank fs_28"></i>
@@ -79,9 +111,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <h6 class="fs_16">Settings</h6>
+                    <ul class="nav setting_nav">
+                        <li class="nav-item"><a class="nav-link" href="detail_profile.html"><i class="fa-solid fa-user"></i> <span>Detail Profile</span> <i class="fa-solid fa-chevron-right ms-auto"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="my_order.html"><i class="fa-solid fa-receipt"></i> <span>My Order</span> <i class="fa-solid fa-chevron-right ms-auto"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout.html"><i class="fa-solid fa-door-open"></i> <span>Log Out</span></a></li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <!-- end Available Event section -->
          
     </main>
     <!-- ___________________ end main area ___________________ -->

@@ -778,7 +778,7 @@ span.error:not(input) {
     justify-content: center;
 }
 
-.ticket_item{
+.ticket_item {
     display: flex;
     align-items: center;
     padding: 12px;
@@ -787,7 +787,8 @@ span.error:not(input) {
     gap: 8px;
     border: 1px solid #EDEDED;
 }
-.icon_box{
+
+.icon_box {
     width: 34px;
     height: 34px;
     border-radius: 4px;
@@ -795,6 +796,7 @@ span.error:not(input) {
     place-items: center;
     background-color: var(--bg_light3);
 }
+
 .modal__bottom .modal-body {
     overflow-y: auto;
     overflow-x: hidden;
@@ -806,7 +808,7 @@ span.error:not(input) {
     width: 100%;
     max-height: 100%;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 .modal__bottom .flatpickr-rContainer,
@@ -848,25 +850,27 @@ span.error:not(input) {
 
 .datePicker_btn {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-    background-image: url("../icons/calendar.svg"),url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-image: url("../icons/calendar.svg"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: left 0.5em center,right 0.7em center;
-    background-size: 1.3em,0.8em;
+    background-position: left 0.5em center, right 0.7em center;
+    background-size: 1.3em, 0.8em;
     padding-left: 2.3em;
     padding-right: 2.3em;
-    
+
 }
+
 .ticket_list .ticket-actions,
 .ticket_list .ticket-input-group,
-.ticket-actions.show_input .add_btn{
+.ticket-actions.show_input .add_btn {
     display: none;
 }
+
 .show_options .ticket_list .ticket-actions,
-.ticket-actions.show_input .ticket-input-group{
+.ticket-actions.show_input .ticket-input-group {
     display: initial;
 }
 
-.ticket-actions .input-group .form-control{
+.ticket-actions .input-group .form-control {
     border: none;
     font-size: 12px;
     padding: 0.4em 1.1em;
@@ -878,5 +882,62 @@ span.error:not(input) {
 /* .............. end event details page .............. */
 
 /* .............. start profile page .............. */
+.pfl_main{
+    background-image: url("../img/login/login-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 384px;
+}
+.pfl_img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
+.bg_dangerLt {
+    color: var(--c_danger);
+    background-color: #de754426;
+}
+
+.pfl_actBtn {
+    font-size: var(--fs_16);
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 0.75em;
+    background: var(--bg_white) !important;
+    border: 1px solid var(--c_secondary) !important;
+    box-shadow: 0.125em 0.1875em 0em var(--c_black);
+    border-radius: 0.625em;
+}
+.pfl_actBtn i{
+    font-size: 1.5em;
+}
+.pfl_actBtn .badge{
+    font-size: 0.75em;
+    padding: 0.2917em 0.5em;
+}
+.setting_nav{
+    flex-direction: column;
+}
+.setting_nav .nav-item{
+    border-bottom: 1px solid #868685;
+}
+.setting_nav .nav-item:last-of-type{
+    border-bottom: none;
+}
+.setting_nav .nav-link{
+    color: var(--c_secondary);
+    padding: 16px 0px;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+.setting_nav .nav-link i:first-of-type{
+    font-size: 24px;
+    color: var(--c_white);
+}
 /* .............. end profile page .............. */
