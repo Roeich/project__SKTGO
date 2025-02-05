@@ -656,6 +656,10 @@ body {
 /* .............. end voucher details page .............. */
 
 /* .............. start voucher checkout page .............. */
+.shadow_sm {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
 .paymentMethod_btn {
     padding-left: 3rem;
     background-image: var(--bs-form-select-bg-img), url("../icons/CreditCard.png");
@@ -882,12 +886,13 @@ span.error:not(input) {
 /* .............. end event details page .............. */
 
 /* .............. start profile page .............. */
-.pfl_main{
+.pfl_main {
     background-image: url("../img/login/login-bg.svg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 384px;
 }
+
 .pfl_img {
     width: 64px;
     height: 64px;
@@ -913,31 +918,46 @@ span.error:not(input) {
     box-shadow: 0.125em 0.1875em 0em var(--c_black);
     border-radius: 0.625em;
 }
-.pfl_actBtn i{
+
+.pfl_actBtn i {
     font-size: 1.5em;
 }
-.pfl_actBtn .badge{
+
+.pfl_actBtn .badge {
     font-size: 0.75em;
     padding: 0.2917em 0.5em;
 }
-.setting_nav{
+
+.setting_nav {
     flex-direction: column;
 }
-.setting_nav .nav-item{
+
+.setting_nav .nav-item {
     border-bottom: 1px solid #868685;
 }
-.setting_nav .nav-item:last-of-type{
+
+.setting_nav .nav-item:last-of-type {
     border-bottom: none;
 }
-.setting_nav .nav-link{
+
+.setting_nav .nav-link {
     color: var(--c_secondary);
     padding: 16px 0px;
     gap: 12px;
     display: flex;
     align-items: center;
 }
-.setting_nav .nav-link i:first-of-type{
+
+.setting_nav .nav-link i:first-of-type {
     font-size: 24px;
     color: var(--c_white);
 }
+
+.setting_nav .nav-link i:last-of-type {
+    color: var(--c_secondary);
+    text-shadow: none;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: none;
+}
+
 /* .............. end profile page .............. */
