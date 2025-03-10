@@ -961,3 +961,81 @@ span.error:not(input) {
 }
 
 /* .............. end profile page .............. */
+
+/* .............. start wishlist page .............. */
+.curve_header::before,
+.curve_header::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 1px;
+    transform: translateY(100%);
+}
+.curve_header::before{
+    left: 0rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H0V20C0 8.9543 8.9543 0 20 0Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.curve_header::after{
+    right: 0rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 20L20 0L0 -8.74227e-07C11.0457 -3.91405e-07 20 8.9543 20 20Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.nav_underline1 .nav-link{
+    color: var(--c_secondary);
+    border: none;
+    padding-bottom: 0rem;
+    margin-right: 0.4rem;
+}
+.nav_underline1 .nav-link::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 50rem;
+    background-color: transparent;
+    margin: auto;
+    margin-top: 0.3rem;
+}
+.nav_underline1 .nav-link.active::after{
+    background-color: var(--bg_primary);
+}
+.layout_tglBtn{
+    line-height: 1;
+    padding: 6px;
+}
+.gird__layout .layout_tglBtn i:first-of-type,
+.layout_tglBtn i:last-of-type{
+    display: none;
+}
+.gird__layout .layout_tglBtn i:last-of-type{
+    display: initial;
+}
+.wishlist__items{
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem; */
+
+    --gutter_x: 1rem;
+    --gutter_y: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--gutter_y));
+    margin-right: calc(-.5 * var(--gutter_x));
+    margin-left: calc(-.5 * var(--gutter_x));
+}
+.wishlist__item{
+    padding-right: calc(var(--gutter_x) * .5);
+    padding-left: calc(var(--gutter_x) * .5);
+    margin-top: var(--gutter_y);
+    width: 100%;
+}
+.gird__layout .wishlist__item{
+    width: 50%;
+}
+.wishlist__items .voucher_card{
+    width: 100%;
+}
+/* .............. end wishlist page .............. */

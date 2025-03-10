@@ -16,7 +16,7 @@
 <body>
     <!-- ___________________ start header area ___________________ -->
     <!-- top header -->
-    <div class="sticky-top py-2 bg-white shadow_sm">
+    <div class="sticky-top py-2 bg-white shadow_sm curve_header">
         <div class="container">
             <div class="d-flex align-items-center">
                 <div class="pe-3 flex-grow-1">
@@ -31,29 +31,160 @@
                     </a>
                 </div>
             </div>
+
+            <div class="d-flex justify-content-between align-items-end gap-2">
+                <div>
+                    <div class="nav nav-underline nav_underline1" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-voucher-tab" data-bs-toggle="tab" data-bs-target="#nav-voucher" type="button" role="tab" aria-controls="nav-voucher" aria-selected="true">Voucher</button>
+                        <button class="nav-link" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-event" type="button" role="tab" aria-controls="nav-event" aria-selected="false">Event</button>
+                    </div>
+                </div>
+                <div class="pe-2">
+                    <button class="btn btn_shadow layout_tglBtn" type="button">
+                        <i class="fa-solid fa-diagram-next"></i>
+                        <i class="fa-solid fa-border-all"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ___________________ start header area ___________________ -->
 
     <!-- ___________________ start main area ___________________ -->
     <main class="main bg_light3">
-        <section>
+        <section class="py-3">
             <div class="container">
-                <ul class="nav nav-pills w-100">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#scrollspyLocation">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyPhoto">Photos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyVenue">Venue &amp; Ticket</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyTnC">Terms &amp; Conditions</a>
-                    </li>
-
-                </ul>
+                <div class="row">
+                    <div class="col-6"></div>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-voucher" role="tabpanel" aria-labelledby="nav-voucher-tab" tabindex="0">
+                        <div class="wishlist__items">
+                            <div class="wishlist__item">
+                                <a class="card voucher_card" href="voucher_details.html">
+                                    <div class="card_header">
+                                        <div class="card_slider owl-carousel">
+                                            <div class="d-block imgBox_2x1">
+                                                <img class="card-img-top" src="assets/img/home/voucher-1.jpg" alt="voucher">
+                                            </div>
+                                            <div class="d-block imgBox_2x1">
+                                                <img class="card-img-top" src="assets/img/home/voucher-2.jpg" alt="voucher">
+                                            </div>
+                                            <div class="d-block imgBox_2x1">
+                                                <img class="card-img-top" src="assets/img/home/voucher-3.jpg" alt="voucher">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">Voucher Name</h5>
+                                        <div class="fs_12 mb-1">
+                                            Unlimited Playing Pool
+                                        </div>
+                                        <div class="c_gray fs_10 mb-1">
+                                            <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                            <span>Precious Billiard</span> | 
+                                            <i class="fa-solid fa-ticket-simple"></i>
+                                            <span>Hotel</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="most_recommended">
+                                        <div>Cheapest Ever</div>
+                                        <div>
+                                            <i class="fa-solid fa-trophy icon_normal c_white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="wishlist__item">
+                                <a class="card voucher_card" href="voucher_details.html">
+                                    <div class="card_header">
+                                        <div class="d-block imgBox_2x1">
+                                            <img class="card-img-top" src="assets/img/home/voucher-1.jpg" alt="voucher">
+                                        </div>
+                                        <div class="prd_badge badge_best_deals badge_top"><span>Best Deals</span></div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1">The First Aquarium Restaurant in Bali</h5>
+                                        <div class="fs_12 mb-1">
+                                            The First Aquarium Restaurant in Bali
+                                        </div>
+                                        <div class="c_gray fs_10 mb-1">
+                                            <img class="fs_16 inline_img" src="assets/img/home/billiard.png" alt="billiard">
+                                            <span>Pestrant Logic</span> | 
+                                            <i class="fa-solid fa-ticket-simple"></i>
+                                            <span>Hotel</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_12 c_gray text-decoration-line-through">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">50%</span></div> <div class="fs_12 fw-bold ps-1 c_danger">5 Left</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab" tabindex="0">
+                        <div class="wishlist__items">
+                            <div class="wishlist__item">
+                                <div class="card">
+                                    <div class="card_header">
+                                        <a class="d-block imgBox_1x1" href="event_details.html">
+                                            <img class="card-img-top" src="assets/img/home/event-1.jpg" alt="event">
+                                        </a>
+                                        <button class="btn btn-light wishlist_btn add_wishlist" type="button">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </button>
+                                        <div class="prd_badge badge_best_deals"><span>Best Deals</span></div>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Ice Cream Museum</a></h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="fa-solid fa-palette"></i>
+                                            <span class="fs_10">Entertainment</span>
+                                        </div>
+                                        <div class="c_gray mb-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                        <div>
+                                            <div class="fs_12 c_gray text-decoration-line-through">Rp 500.000</div>
+                                            <div class="fs_14 fw-bold">Rp 250.000 <span class="fs_8 badge bg_danger rounded-pill">50%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__item">
+                                <div class="card">
+                                    <div class="card_header">
+                                        <a class="d-block imgBox_1x1" href="event_details.html">
+                                            <img class="card-img-top" src="assets/img/home/event-2.jpg" alt="event">
+                                        </a>
+                                        <button class="btn btn-light wishlist_btn add_wishlist listed" type="button">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-body p_10">
+                                        <h5 class="card-title fs_14 mb-1"><a class="text-decoration-none" href="event_details.html">Formula Super</a></h5>
+                                        <div class="c_gray mb-1">
+                                            <i class="fa-solid fa-palette"></i>
+                                            <span class="fs_10">Race</span>
+                                        </div>
+                                        <div class="c_gray mb-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="fs_10">1 Nov - 21 Dec 2023</span>
+                                        </div>
+                                        <div>
+                                            <div class="fs_12 c_gray text-decoration-line-through">Rp 1.000.000</div>
+                                            <div class="fs_14 fw-bold">Rp 660.000 <span class="fs_8 badge bg_danger rounded-pill">30%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -70,7 +201,7 @@
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/common.js"></script>
     <!--  -->
-    <script src="assets/js/voucher_checkout.js"></script>
+    <script src="assets/js/wishlist.js"></script>
 </body>
 
 </html>
