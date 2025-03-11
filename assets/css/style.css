@@ -5,7 +5,7 @@ body {
 
 .top_btn,
 .top_serachBox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 8px 11px;
     height: 48px;
@@ -1039,3 +1039,35 @@ span.error:not(input) {
     width: 100%;
 }
 /* .............. end wishlist page .............. */
+
+/* .............. start cart page .............. */
+.act__row .hide__default{
+    display: none;
+}
+.act__row .btn{
+    filter: grayscale(1);
+}
+.act__row.active__actRow .btn{
+    filter: grayscale(0);
+}
+.act__row.active__actRow .hide__default{
+    display: block;
+}
+.prd__item.sold__out,
+.prd__item.sold__out img,
+.prd__item.sold__out .c_danger{
+    filter: grayscale(1);
+}
+.prd__item.sold__out b.c_danger{
+    filter: grayscale(0);
+}
+.prd__item.sold__out .form-check-input{
+    pointer-events: none;
+}
+#bottom_warning{
+    color: var(--c_danger);
+    padding: 0.8rem 0rem;
+    text-align: center;
+    display: none;
+}
+/* .............. end cart page .............. */
