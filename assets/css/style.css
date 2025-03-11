@@ -1071,3 +1071,14 @@ span.error:not(input) {
     display: none;
 }
 /* .............. end cart page .............. */
+/* .............. start order summary page .............. */
+.bg_warningLt{
+    background: linear-gradient(94.86deg, #FFF1B7 0%, #FFFDF5 99.5%);
+}
+.copy_clipboard{
+    cursor: pointer;
+}
+.bg_dangerLt{
+    background-color: #ff00001a;
+}
+/* .............. end order summary page .............. */

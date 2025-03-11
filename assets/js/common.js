@@ -13,5 +13,28 @@ $(document).ready(function(){
             $(inpItem).attr("type", "password");
         }
     });
+
+    // Initialize Bootstrap tooltips
+    $('[data-bs-toggle="tooltip"]').tooltip();
+
+    // Copy to Clipboard functionality
+    $(document).on('click', '.copy_clipboard', function () {
+        const textToCopy = $(this).attr('data-clipboard');
+
+        const tempInput = $('<input>');
+        $('body').append(tempInput);
+        tempInput.val(textToCopy).select();
+        document.execCommand('copy');
+        tempInput.remove();
+
+        const tooltip = bootstrap.Tooltip.getInstance(this);
+        tooltip.setContent({ '.tooltip-inner': 'Copied!' }); 
+        tooltip.show();
+
+        setTimeout(() => {
+            tooltip.setContent({ '.tooltip-inner': 'Click to copy' });
+            tooltip.hide();
+        }, 2000);
+    });
     /* ----------------- end common functionality ----------------- */
 })
