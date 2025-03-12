@@ -1268,3 +1268,44 @@ span.error:not(input) {
     object-fit: cover;
 }
 /* .............. end my order page .............. */
+
+/* .............. start survey page .............. */
+.survey_item{
+    background-color: var(--bg_white);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.survey_img {
+    width: 42px;
+    height: 42px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.inline_icon {
+    height: 1em;
+    margin-left: 0.1em;
+    transform: scale(1.1);
+    height: 1.3em;
+    width: 1.3em;
+    margin-left: 0.1em;
+    margin-top: -0.2em;
+}
+.survey_historyItem{
+    color: var(--c_secondary);
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid var(--bs-border-color);
+    text-decoration: none;
+}
+.survey_historyItem:hover{
+    color: var(--c_secondary);
+    background-color: var(--bg_light3);
+}
+.survey_historyImg {
+    width: 18px;
+    height: 18px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+/* .............. end survey page .............. */
