@@ -901,7 +901,6 @@ span.error:not(input) {
 }
 
 .bg_dangerLt {
-    color: var(--c_danger);
     background-color: #de754426;
 }
 
@@ -1081,4 +1080,191 @@ span.error:not(input) {
 .bg_dangerLt{
     background-color: #ff00001a;
 }
+.nav_underline2{
+    border-bottom: 1px solid var(--c_dark);
+}
+.nav_underline2 .nav-link{
+    color: var(--c_secondary);
+    border: none;
+    padding-bottom: 0rem;
+    flex-grow: 1;
+}
+.nav_underline2 .nav-link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    border-radius: 50rem;
+    background-color: transparent;
+    margin: auto;
+    margin-top: 0.3rem;
+    margin-bottom: -4px;
+}
+.nav_underline2 .nav-link.active::after{
+    background-color: var(--c_dark);
+}
+.step__list{
+    list-style: none;
+    padding-left: 0rem;
+    counter-reset: list;
+}
+.step__list li{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+   
+}
+.step__list li::before{
+    counter-increment: list;
+    content: counter(list);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+
+    width: 27px;
+    min-width: 27px;
+    height: 27px;
+    border-radius: 50%;
+
+    background: #FFCF01;
+    border: 1px solid #242424;
+    box-shadow: inset -2px -3px 0px #000000, inset 2px 3px 0px #FFFFFF;
+}
+
+.alert_icon{
+    font-size: 48px;
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.alert_icon::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/order/alert_iconBg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bgRotate 2s linear 1s infinite forwards;
+}
+.alert_icon>i{
+    font-size: 0.5em;
+    position: relative;
+}
+@keyframes bgRotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%,
+    100%{
+        transform: rotate(-180deg);
+    }
+}
 /* .............. end order summary page .............. */
+
+/* .............. start detail ticket page .............. */
+.badge_warning{
+    color: var(--c_primary);
+    background-color: #FFF2D9;
+}
+.badge_danger{
+    color: #F05947;
+    background-color: #FAEAE3;
+}
+.badge_success{
+    color: #008000;
+    background-color: #D9ECD9;
+}
+.badge_waiting{
+    color: #FFA500;
+    background-color: #FFA50026;
+}
+.badge_paid{
+    color: #008000;
+    background-color: #00800026;
+}
+.badge_canceled{
+    color: #F05947;
+    background-color: #F0594726;
+}
+/* .............. end detail ticket page .............. */
+/* .............. start my order page .............. */
+.order__item{
+    padding: 1rem;
+    background-color: var(--bg_white);
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.order__item:hover{
+    color: var(--c_dark);
+    outline: 1px solid var(--bs-border-color);
+}
+.qr_code{
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.cursor_pointer{
+    cursor: pointer;
+}
+[data-modal-tabarea]{
+    display: none;
+}
+[data-modal-tabarea]:first-of-type{
+    display: block;
+}
+.date_badge{
+    position: relative;
+}
+.date_badge::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+.date_badge span{
+    position: relative;
+    display: inline-block;
+    color: var(--c_white);
+    background-color: var(--bg_secondary);
+    padding: 8px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px 0.5rem var(--c_white);
+}
+.qr_codeLg{
+    width: 244px;
+    height: 244px;
+}
+.modal_copyClipboard{
+    font-size: var(--fs_16);
+    border: 1px dashed var(--c_primary);
+    background-color: rgba(255, 207, 1, 0.12);
+    padding: 10px;
+    border-radius: 8px;
+    background-clip:padding-box
+}
+.map_img{
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+/* .............. end my order page .............. */

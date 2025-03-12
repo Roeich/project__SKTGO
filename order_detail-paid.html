@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Detail Ticket</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- ___________________ start header area ___________________ -->
+    <!-- top header -->
+    <div class="sticky-top py-2 bg-white shadow_sm">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="pe-3 flex-grow-1">
+                    <h1 class="fs_20 mb-0">
+                        <a class="text-decoration-none" href="my_order.html">Detail Order</a>
+                    </h1>
+                </div>
+                <div>
+                    <a class="top_btn position-relative shadow-none border-0" href="index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ___________________ start header area ___________________ -->
+
+    <!-- ___________________ start main area ___________________ -->
+    <main class="main bg_light3">
+        <section>
+
+            <!--  -->
+            <div class="d-flex justify-content-between align-items-center py-2 px-3 gap-2 text-decoration-none bg_dark text-white fw-semibold">
+                <div class="fs_12"><i class="fa-solid fa-basket-shopping fs_20 me-1"></i> <span class="fw-normal">ID Order</span> KWS8713981013 </div>
+                <div>
+                    <div class="badge badge_success">Paid</div>
+                </div>
+            </div>
+
+            <div>
+                <!-- item -->
+                <div class="p-3 bg-white mb-2">
+                    <div class="c_gray fs_14 mb-2 text-decoration-none" href="#">
+                        <img class="fs_20 inline_img me-1" src="assets/img/home/billiard.png" alt="billiard">
+                        <span>Precious Billiard</span>
+                    </div>
+                    <div class="d-flex gap-1 mb-3">
+                        <div style="width: 48px;">
+                            <div class="imgBox_1x1">
+                                <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="px-2 pt-1 flex-grow-1">
+                            <h6 class="fs_16 ff_inter mb-1">
+                                <a class="text-decoration-none prd__name" href="voucher_details.html">
+                                    Voucher Name
+                                </a>
+                            </h6>
+                            <div class="">
+                                <i class="fa-solid fa-chess-rook"></i>
+                                <span class="fs_12 c_darkGray">Hotel</span>
+                                |
+                                <span class="fs_14 fw-bold">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through ms-1">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn d-flex align-items-center p-2 pe-3 gap-3 border rounded_8 cursor_pointer" data-bs-toggle="modal" data-bs-target="#detailModal__1">
+                            <div>
+                                <img class="qr_code" src="assets/img/order/qr-code.png" alt="qr code">
+                            </div>
+                            <div class="flex-grow-1 text-start">
+                                <div class="mb-1">Kode Booking: <b>7781GV3</b> <span class="ms-1 copy_clipboard" data-clipboard="7781GV3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click to copy"><i class="fa-regular fa-clone"></i></span></div>
+                                <div class="fs_12 c_darkGray">See QR Code</div>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-right icon_normal"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- detail modal -->
+                    <div class="modal fade modal__bottom show d-block" id="detailModal__1" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title fs_20" id="shareModalLabel">Detail Voucher</h5>
+                                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4 pt-0 overflow-x-hidden">
+                                    <div class="nav nav-underline nav_underline2 mb-2">
+                                        <button class="nav-link active" type="button" data-modal-tab="e-voucher">E-Voucher</button>
+                                        <button class="nav-link" type="button" data-modal-tab="terms-condition">Terms & Condition</button>
+                                    </div>
+                                    <div class="pt-4">
+                                        <div data-modal-tabarea="e-voucher">
+                                            <div class="text-center">
+                                                <h3 class="fs_18 fw-semibold mb-2">Voucher Name</h3>
+                                                <div class="mb-3">
+                                                    <i class="fa-solid fa-store"></i> Precious Billiard | <i class="fa-solid fa-ticket-simple"></i> Hotel
+                                                </div>
+                                                <div class="date_badge mb-5">
+                                                    <span><i class="fa-solid fa-calendar"></i> 01 Dec 2024 - 31 Dec 2024</span>
+                                                </div>
+                                                <div class="mb-5">
+                                                    <img class="qr_codeLg" src="assets/img/order/qr-code-lg.png" alt="qr-code">
+                                                </div>
+                                                <div class="copy_clipboard modal_copyClipboard" data-clipboard="7781GV3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click to copy">
+                                                    Kode Booking: <b>7781GV3</b> <i class="fa-regular fa-clone"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-modal-tabarea="terms-condition">
+                                            <div>
+                                                <h5 class="fs_16">
+                                                    Location
+                                                </h5>
+                                                <div class="mb-4">
+                                                    <div class="d-flex gap-2">
+                                                        <div>
+                                                            <img class="map_img" src="assets/img/order/map.png" alt="map">
+                                                        </div>
+                                                        <div>
+                                                            <h6>Hotel Ampera Fatmawati</h6>
+                                                            <address class="fs_12 c_darkGray mb-1">
+                                                                Jl. Gerbang Pemuda No.3, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270
+                                                            </address>
+                                                            <div>
+                                                                <a href="#">Open Maps <i class="fa-solid fa-paper-plane"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h5 class="fs_16">
+                                                    Title Here
+                                                </h5>
+                                                <p>
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    </li>
+                                                    <li>
+                                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                                    </li>
+                                                    <li>
+                                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                    </li>
+                                                    <li>
+                                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- total payment -->
+            <div class="p-3 bg-white mb-2">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb_8">
+                    <h2 class="fs_16 fw-semibold mb-0">
+                        Total Payment
+                    </h2>
+                    <div>
+                        <img class="payment_methodIcon me-0" src="assets/icons/mandiri.png" alt="mandiri">
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 py-2 border-top border-bottom">
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Voucher Price A</div>
+                        <div class="fw-semibold">500.000</div>
+                    </div>
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Voucher Price B</div>
+                        <div class="fw-semibold">1.000.000</div>
+                    </div> 
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Discount</div>
+                        <div class="fw-semibold c_danger">500.000</div>
+                    </div> 
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>PPN</div>
+                        <div class="fw-semibold">123.456</div>
+                    </div> 
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Platform Fee</div>
+                        <div class="fw-semibold">123.456</div>
+                    </div> 
+                </div>
+                <div class="d-flex justify-content-between align-items-center gap-2 fs_20 fw-bold py_12">
+                    <div>Total</div>
+                    <div>2.640.000</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ___________________ end main area ___________________ -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/common.js"></script>
+    <!--  -->
+    <script src="assets/js/order_detail.js"></script>
+</body>
+
+</html>

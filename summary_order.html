@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Summary Order</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- ___________________ start header area ___________________ -->
+    <!-- top header -->
+    <div class="sticky-top py-2 bg-white shadow_sm">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="pe-3 flex-grow-1">
+                    <h1 class="fs_20 mb-0">
+                        <a class="text-decoration-none" href="profile.html">Summary Order</a>
+                    </h1>
+                </div>
+                <div>
+                    <a class="top_btn position-relative shadow-none border-0" href="wishlist.html">
+                        <i class="fa-solid fa-heart text-white"></i>
+                        <div class="position-absolute top-0 end-0 pe-2">
+                            <span class="fs_8 badge bg_danger rounded-pill">2</span>
+                        </div>
+                    </a>
+                    <a class="top_btn position-relative shadow-none border-0" href="index.html">
+                        <i class="fa-solid fa-house-chimney text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ___________________ start header area ___________________ -->
+
+    <!-- ___________________ start main area ___________________ -->
+    <main class="main bg_light3">
+        <section>
+
+            <!-- payment info -->
+            <div class="p-3 bg-white mb-2">
+                <div class="mb_12">
+                    <div class="d-flex align-items-center gap-3 p_12 bg_warningLt border rounded_10">
+                        <div>
+                            <i class="fa-solid fa-stopwatch fs_24"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="fs_16 fw-bold">Pay Before</div>
+                            <div class="fs_12">Friday, 25 February 2024</div>
+                        </div>
+                        <div>
+                            <span id="payment_countdown" class="fw-bold countdown" data-date="2025/05/15">00:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="p-3 border rounded_10">
+                        <div class="d-flex fs_12 mb-2">
+                            <img class="payment_methodIcon" src="assets/icons/mandiri.png" alt="mandiri">
+                            Mandiri Account Number
+                        </div>
+                        <div class="fw-bold pb-3 mb-3 border-bottom">
+                            0893278974290802 <span class="ms-1 copy_clipboard" data-clipboard="0893278974290802" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click to copy"><i class="fa-regular fa-clone"></i></span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="flex-grow-1">
+                                <div class="fs_12 mb-2">Total to be paid</div>
+                                <div class="fw-bold">
+                                    Rp1.000.<span class="bg_primary rounded-1">134</span> <span class="ms-1 copy_clipboard" data-clipboard="0893278974290802" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click to copy"><i class="fa-regular fa-clone"></i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button" data-bs-toggle="modal" data-bs-target="#howToPayModal">How to pay</button>
+                            </div>
+                        </div>
+                        <div class="p-2 px-3 rounded_6 bg_dangerLt text-center"> <i class="fa-solid fa-triangle-exclamation icon_normal c_danger"></i> Make sure the number is correct up to the last 3 digits</div>
+                    </div>
+                    <!-- how to pay modal -->
+                    <div class="modal fade modal__bottom" id="howToPayModal" tabindex="-1" aria-labelledby="howToPayModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title fs_20" id="howToPayModalLabel">How to pay</h5>
+                                    <div class="ms-auto">
+                                        <img class="payment_methodIcon me-0" src="assets/icons/mandiri.png" alt="mandiri">
+                                    </div>
+                                </div>
+                                <div class="modal-body p-4 pt-0 overflow-x-hidden">
+                                    <div class="d-flex flex-column gap-2 p_12 bg_warningLt border rounded_10 mb_16">
+                                        <div class="d-flex justify-content-between gap-2">
+                                            <div>Account Number</div>
+                                            <div class="fw-bold">
+                                                0893278974290802 <span class="ms-1 copy_clipboard" data-clipboard="0893278974290802" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click to copy"><i class="fa-regular fa-clone"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between gap-2">
+                                            <div>Account owner name</div>
+                                            <div class="fw-bold">
+                                                PT. JKTGO
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between gap-2">
+                                            <div>Payment amount</div>
+                                            <div class="fw-bold c_danger">
+                                                Rp11.097.000
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="nav nav-underline nav_underline2 mb-3" id="nav-tab" role="tablist">
+                                            <button class="nav-link" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-Mbanking" type="button" role="tab" aria-controls="nav-event" aria-selected="false">Mbanking</button>
+                                            <button class="nav-link" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-iBanking" type="button" role="tab" aria-controls="nav-event" aria-selected="false">iBanking</button>
+                                            <button class="nav-link active" id="nav-voucher-tab" data-bs-toggle="tab" data-bs-target="#nav-ATM" type="button" role="tab" aria-controls="nav-voucher" aria-selected="true">ATM</button>
+                                            <button class="nav-link" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-SMS-Banking" type="button" role="tab" aria-controls="nav-event" aria-selected="false">SMS Banking</button>
+                                        </div>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade" id="nav-Mbanking" role="tabpanel" aria-labelledby="nav-event-tab" tabindex="0">
+                                                <ol class="step__list">
+                                                    <li>Pilih Menu Lain > Transfer</li>
+                                                    <li>Pilih jenis rekening asal dan pilih virtual account billing</li>
+                                                    <li>Masukkan nomor virtual account 9774982091090486 dan pilih benar</li>
+                                                    <li>Masukkan jumlah Rp.210.000</li>
+                                                    <li>Periksa informasi yang tertera di layar, pas</li>
+                                                </ol>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-iBanking" role="tabpanel" aria-labelledby="nav-event-tab" tabindex="0">
+                                                <ol class="step__list">
+                                                    <li>Pilih Menu Lain > Transfer</li>
+                                                    <li>Pilih jenis rekening asal dan pilih virtual account billing</li>
+                                                    <li>Masukkan nomor virtual account 9774982091090486 dan pilih benar</li>
+                                                    <li>Masukkan jumlah Rp.210.000</li>
+                                                    <li>Periksa informasi yang tertera di layar, pas</li>
+                                                </ol>
+                                            </div>
+                                            <div class="tab-pane fade show active" id="nav-ATM" role="tabpanel" aria-labelledby="nav-voucher-tab" tabindex="0">
+                                                <ol class="step__list">
+                                                    <li>Pilih Menu Lain > Transfer</li>
+                                                    <li>Pilih jenis rekening asal dan pilih virtual account billing</li>
+                                                    <li>Masukkan nomor virtual account 9774982091090486 dan pilih benar</li>
+                                                    <li>Masukkan jumlah Rp.210.000</li>
+                                                    <li>Periksa informasi yang tertera di layar, pas</li>
+                                                </ol>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-SMS-Banking" role="tabpanel" aria-labelledby="nav-event-tab" tabindex="0">
+                                                <ol class="step__list">
+                                                    <li>Pilih Menu Lain > Transfer</li>
+                                                    <li>Pilih jenis rekening asal dan pilih virtual account billing</li>
+                                                    <li>Masukkan nomor virtual account 9774982091090486 dan pilih benar</li>
+                                                    <li>Masukkan jumlah Rp.210.000</li>
+                                                    <li>Periksa informasi yang tertera di layar, pas</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-block border-0">
+                                    <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="button" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- detail Order -->
+            <div class="p-3 bg-white mb-2">
+                <h2 class="fs_16 fw-semibold mb_12">
+                    Detail Order
+                </h2>
+                <div>
+                    <a class="d-flex justify-content-between align-items-center py_12 gap-2 text-decoration-none" href="#">
+                        <div class="fs_12"><i class="fa-solid fa-basket-shopping fs_20 me-1"></i> <span class="c_darkGray">ID Order</span> KWS8713981013 </div>
+                        <div>
+                            <i class="fa-solid fa-chevron-right icon_normal"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="py_12 border-top">
+                    <div class="c_gray fs_14 mb-2">
+                        <img class="fs_20 inline_img me-1" src="assets/img/home/billiard.png" alt="billiard">
+                        <span>Precious Billiard</span>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <div style="width: 48px;">
+                            <div class="imgBox_1x1">
+                                <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="px-2 pt-1 flex-grow-1">
+                            <h6 class="fs_16 ff_inter mb-1">
+                                <a class="text-decoration-none prd__name" href="voucher_details.html">
+                                    Voucher Name
+                                </a>
+                            </h6>
+                            <div class="">
+                                <i class="fa-solid fa-ticket-simple"></i>
+                                <span class="fs_12 c_darkGray">Hotel</span>
+                                |
+                                <span class="fs_14 fw-bold">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through ms-1">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py_12 border-top">
+                    <div class="c_gray fs_14 mb-2">
+                        <img class="fs_20 inline_img me-1" src="assets/img/home/billiard.png" alt="billiard">
+                        <span>Precious Billiard</span>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <div style="width: 48px;">
+                            <div class="imgBox_1x1">
+                                <img class="rounded-2" src="assets/img/voucher/banner.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="px-2 pt-1 flex-grow-1">
+                            <h6 class="fs_16 ff_inter mb-1">
+                                <a class="text-decoration-none prd__name" href="voucher_details.html">
+                                    Voucher Name
+                                </a>
+                            </h6>
+                            <div class="">
+                                <i class="fa-solid fa-ticket-simple"></i>
+                                <span class="fs_12 c_darkGray">Hotel</span>
+                                |
+                                <span class="fs_14 fw-bold">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through ms-1">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- total payment -->
+            <div class="p-3 bg-white mb-2">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb_8">
+                    <h2 class="fs_16 fw-semibold mb-0">
+                        Detail Order
+                    </h2>
+                    <div>
+                        <img class="payment_methodIcon me-0" src="assets/icons/mandiri.png" alt="mandiri">
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 py-2 border-top border-bottom">
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Voucher Price A</div>
+                        <div class="fw-semibold">500.000</div>
+                    </div>
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Voucher Price B</div>
+                        <div class="fw-semibold">1.000.000</div>
+                    </div> 
+                    <div class="fs_12 d-flex justify-content-between">
+                        <div>Discount</div>
+                        <div class="fw-semibold c_danger">500.000</div>
+                    </div> 
+                </div>
+                <div class="d-flex justify-content-between align-items-center gap-2 fs_20 fw-bold py_12">
+                    <div>Total</div>
+                    <div>2.640.000</div>
+                </div>
+                <div>
+                    <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="button">I have already paid</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ___________________ end main area ___________________ -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/common.js"></script>
+    <!--  -->
+    <script src="assets/js/summary_order.js"></script>
+</body>
+
+</html>
