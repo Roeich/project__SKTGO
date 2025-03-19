@@ -20,80 +20,189 @@ $(document).ready(function(){
 
     /* ---------------- start change phone form ---------------- */
     $("#changePhoneNumberBtn").click(function(){
-        // send otp
-
+        // send phone otp
+        
         // show modal
         $("#changePhoneNumberModal").modal("show");
     });
+
+    // phone otp check
+    $("#phoneOtp").pincodeInput({
+        hidedigits: false, 
+        inputs: 5,
+        complete: function (value, e, errorElement) {
+            if(value==="12345"){
+                $("#phoneOtpInputStep").removeClass("disable__btns");
+                $("#phoneOtpInputStep").hide();
+                $("#phoneInputStep").show();
+                $("#phoneOtp_err").html("");
+            }else{
+                $("#phoneOtpInputStep").addClass("disable__btns");
+                $("#phoneOtp_err").html("OTP doesn't Match");
+            }
+        }
+    });
+
     // otp and phone validate form
-    $('#addAddressForm').validate({
+    $("#changePhoneNumberForm").validate({
+        ignore: [],
         rules: {
-            label: {
-                required: true,
-                minlength: 2
-            },
-            cityAndDistricts: {
-                required: true
-            },
-            postalCode: {
+            phone: {
                 required: true,
                 digits: true,
-                minlength: 5,
-                maxlength: 5
+                minlength: 10,
+                maxlength: 15
             },
-            address: {
-                required: true,
+            phoneOtp: {
+                required: function () {
+                    return $("#phoneOtpInputStep").is(":visible"); 
+                },
+                digits: true,
                 minlength: 5
             }
         },
         messages: {
-            label: {
-                required: "Please enter a label.",
-                minlength: "The label must be at least 2 characters."
+            phone: {
+                required: "Please enter your phone number",
+                digits: "Only numbers are allowed",
+                minlength: "Phone number must be at least 10 digits",
+                maxlength: "Phone number cannot exceed 15 digits"
             },
-            cityAndDistricts: {
-                required: "Please enter City & Districts."
-            },
-            postalCode: {
-                required: "Please enter a postal code.",
-                digits: "The postal code must be numeric.",
-                minlength: "The postal code must be exactly 5 digits.",
-                maxlength: "The postal code must be exactly 5 digits."
-            },
-            address: {
-                required: "Please enter a complete address.",
-                minlength: "The address must be at least 5 characters."
+            phoneOtp: {
+                required: "Please enter the OTP",
+                digits: "Only numbers are allowed",
+                minlength: "OTP must be 5 digits"
             }
         },
-        errorElement: 'div',
+        errorElement: "div",
+        errorPlacement: function (error, element) {
+            if (element.attr("name") === "phoneOtp") {
+                $("#phoneOtp_err").html(error); 
+            } else {
+                error.addClass("text-danger");
+                element.closest("div").append(error);
+            }
+        },
         submitHandler: function (form) {
-            /*
-                $.ajax({
-                    url: "your-server-endpoint-url",
-                    method: "POST",
-                    data: $(form).serialize(), // Serialize the form data
-                    success: function(response) {
-                    console.log("Form submitted successfully.");
-                    },
-                    error: function(xhr, textStatus, errorThrown) {
-                    console.error("Form submission failed:", errorThrown);
-                    }
-                });
-                form.submit();
-            */
+            // send backend
 
-            // if success
-            let previewAddressHtml=`
-                ${form.label.value} <br>
-                <span class="fw-normal">
-                ${form.inp__cityAndDistricts.value} (${form.postalCode.value}) , ${form.address.value}
-                </span>
-            `;
-            $("#addressPreview").html(previewAddressHtml);
-            $("#addAddressModal").modal("hide");
+            //
+            $("#phoneNumberPreview").html(form.phone.value);
+            $("#changePhoneNumberModal").modal("hide");
         }
     });
+
+    // Handle "Next" Button Click
+    $("#changePhoneNumberForm .next_step").click(function () {
+        let currentStep = $(this).closest(".modal-body").find("div:visible");
+
+        if (currentStep.attr("id") === "phoneOtpInputStep") {
+            if ($("#phoneOtp").valid()) {
+                $("#phoneOtpInputStep").hide();
+                $("#phoneInputStep").show();
+            }
+        } else if (currentStep.attr("id") === "phoneInputStep") {
+            if ($("input[name='phone']").valid()) {
+                $("#changePhoneNumberForm").submit();
+            }
+        }
+    });
+    // OTP Resend 
+    $("#resendPhoneOtpBtn").click(function () {
+        
+    });
+    
     /* ---------------- end change phone form ---------------- */
+    
+    /* ---------------- start change email form ---------------- */
+    $("#changeEmailBtn").click(function(){
+        // send phone otp
+        
+        // show modal
+        $("#changeEmailFormModal").modal("show");
+    });
+
+    // email otp check
+    $("#emailOtp").pincodeInput({
+        hidedigits: false, 
+        inputs: 5,
+        complete: function (value, e, errorElement) {
+            if(value==="12345"){
+                $("#emailOtpInputStep").removeClass("disable__btns");
+                $("#emailOtpInputStep").hide();
+                $("#emailInputStep").show();
+                $("#emailOtp_err").html("");
+            }else{
+                $("#emailOtpInputStep").addClass("disable__btns");
+                $("#emailOtp_err").html("OTP doesn't Match");
+            }
+        }
+    });
+
+    // otp and email validate form
+    $("#changeEmailForm").validate({
+        ignore: [],  
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            emailOtp: {
+                required: function () {
+                    return $("#emailOtpInputStep").is(":visible");  
+                },
+                digits: true,
+                minlength: 5
+            }
+        },
+        messages: {
+            email: {
+                required: "Please enter your email address",
+                email: "Please enter a valid email address"
+            },
+            emailOtp: {
+                required: "Please enter the OTP",
+                digits: "Only numbers are allowed",
+                minlength: "OTP must be 5 digits"
+            }
+        },
+        errorElement: "div",
+        errorPlacement: function (error, element) {
+            if (element.attr("name") === "emailOtp") {
+                $("#emailOtp_err").html(error); 
+            } else {
+                error.addClass("text-danger");
+                element.closest("div").append(error); 
+            }
+        },
+        submitHandler: function (form) {
+            $("#emailPreview").html(form.email.value);
+            $("#changeEmailModal").modal("hide"); 
+        }
+    });
+    
+
+    // Handle "Next" Button Click
+    $("#changeEmailForm .next_step").click(function () {
+        let currentStep = $(this).closest(".modal-body").find("div:visible");
+
+        if (currentStep.attr("id") === "emailOtpInputStep") {
+            if ($("#emilOtp").valid()) {
+                $("#emilOtpInputStep").hide();
+                $("#emilInputStep").show();
+            }
+        } else if (currentStep.attr("id") === "emailInputStep") {
+            if ($("input[name='email']").valid()) {
+                $("#changeEmailForm").submit();
+            }
+        }
+    });
+    // OTP Resend 
+    $("#resendEmailOtpBtn").click(function () {
+        
+    });
+    
+    /* ---------------- end change email form ---------------- */
 
     /* ---------------- start add address form ---------------- */
     // address form validation

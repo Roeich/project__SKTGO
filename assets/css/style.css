@@ -1415,4 +1415,26 @@ span.error:not(input) {
 .cursor_pointer{
     cursor: pointer;
 }
+.pincode-input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14px;
+}
+.pincode-input-container input {
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+}
+.pincode-input-error{
+    display: none;
+}
+.phoneInputStep,
+.emailInputStep{
+    display: none;
+}
+.disable__btns .btn{
+    pointer-events: none;
+    user-select: none;
+}
 /* .............. end profile detail page .............. */

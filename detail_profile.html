@@ -87,10 +87,9 @@
                     </div>
                     <div class="col-8">
                         <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
-                            <div class="phoneNumberPreview">
+                            <div id="phoneNumberPreview">
                                 085632829323
                             </div>
-                            <input class="d-none" name="phone" type="tel" value="085632829323">
                             <div>
                                 <button id="changePhoneNumberBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
                             </div>
@@ -103,12 +102,11 @@
                     </div>
                     <div class="col-8">
                         <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
-                            <div>
+                            <div class="emailPreview">
                                 jolego@gmail.com
                             </div>
-                            <input class="d-none" name="email" type="email" value="jolego@gmail.com">
                             <div>
-                                <button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                                <button id="changeEmailBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
                             </div>
                         </div>
                     </div>
@@ -160,47 +158,42 @@
             </div>
         </section>
 
-        <!-- ... survey form success modal ... -->
-        <div class="modal fade modal__bottom" id="formSuccessModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body p-4 overflow-x-hidden text-center">
-                        <img class="img-fluid mb-2" style="width: 160px;" src="assets/img/survey/victory.svg" alt="delivery">
-                        <h3 class="fs_18">
-                            Congratulation!
-                        </h3>
-                        <p class="mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem...
-                        </p>
-                    </div>
-                    <div class="modal-footer py-2 px_20 border-top-0">
-                        <div class="w-100 m-0">
-                            <div class="row gx-3">
-                                <div class="col-12">
-                                    <a class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" href="survey.html">Okay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- ... Change Phone Number form modal ... -->
-        <form id="changePhoneNumberForm" action="#">
-            <div class="modal fade modal__bottom show d-block" id="changePhoneNumberModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <form id="changePhoneNumberForm" action="#" autocomplete="off">
+            <div class="modal fade modal__bottom" id="changePhoneNumberModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header px-4 border-0">
                             <h5 class="modal-title fs_20 c_secondary">Change Phone Number</h5>
-                            <button type="reset" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body p-4 pt-2 overflow-x-hidden">
-                            <div>
+                            <div id="phoneOtpInputStep">
+                                <div class="text-center mb-3">
+                                    We have sent the OTP code to +62 856 ****  <br>
+                                    Please enter the OTP code
+                                </div>
+                                <div class="mb-3">
+                                    <input id="phoneOtp" class="d-none" name="phoneOtp" type="number">
+                                    <div id="phoneOtp_err" class="text-center error"></div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    Didn't receive an OTP code? <span id="resendPhoneOtpBtn" class="c_primary cursor_pointer">Resend OTP Code</span>
+                                </div>
+
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100 next_step" type="button">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="phoneInputStep" class="phoneInputStep">
                                 <div class="mb-3">
                                     Input new phone number
                                 </div>
-                                <div class="d-flex gap-4">
+                                <div class="d-flex gap-4 mb-4">
                                     <div class="fs_18 pt-3">
                                         <i class="fa-solid fa-phone"></i>
                                     </div>
@@ -208,16 +201,12 @@
                                         <input class="form-control inp_underline fs_14" name="phone" type="tel" placeholder="Ex 0812 **** ****">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer py-2 px_20 border-top-0">
-                            <div class="w-100 m-0">
                                 <div class="row gx-3">
                                     <div class="col-6">
                                         <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                                     </div>
                                     <div class="col-6">
-                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Save</button>
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Update</button>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +215,64 @@
                 </div>
             </div>
         </form>
-       
+
+        <!-- ... Change email form modal ... -->
+        <form id="changeEmailForm" action="#" autocomplete="off">
+            <div class="modal fade modal__bottom" id="changeEmailFormModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header px-4 border-0">
+                            <h5 class="modal-title fs_20 c_secondary">Change E-mail</h5>
+                        </div>
+                        <div class="modal-body p-4 pt-2 overflow-x-hidden">
+                            <div id="emailOtpInputStep">
+                                <div class="text-center mb-3">
+                                    We have sent the OTP code to trum****@gmail.com .  <br>
+                                    Please enter the OTP code
+                                </div>
+                                <div class="mb-3">
+                                    <input id="emailOtp" class="d-none" name="emailOtp" type="number">
+                                    <div id="emailOtp_err" class="text-center error"></div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    Didn't receive an OTP code? <span id="resendEmailOtpBtn" class="c_primary cursor_pointer">Resend OTP Code</span>
+                                </div>
+
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100 next_step" type="button">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="emailInputStep" class="emailInputStep">
+                                <div class="mb-3">
+                                    Input new e-mail
+                                </div>
+                                <div class="d-flex gap-4 mb-4">
+                                    <div class="fs_18 pt-3">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <input class="form-control inp_underline fs_14" name="email" type="email" placeholder="Ex mail@mail.com">
+                                    </div>
+                                </div>
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
 
         <!-- ... add address form modal ... -->
         <form id="addAddressForm" action="#">
@@ -331,6 +377,33 @@
             </div>
         </div>
 
+
+        <!-- ... detail profile form success modal ... -->
+        <div class="modal fade modal__bottom" id="formSuccessModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body p-4 overflow-x-hidden text-center">
+                        <img class="img-fluid mb-2" style="width: 160px;" src="assets/img/survey/victory.svg" alt="delivery">
+                        <h3 class="fs_18">
+                            Congratulation!
+                        </h3>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem...
+                        </p>
+                    </div>
+                    <div class="modal-footer py-2 px_20 border-top-0">
+                        <div class="w-100 m-0">
+                            <div class="row gx-3">
+                                <div class="col-12">
+                                    <a class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" href="survey.html">Okay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
     </main>
     <!-- ___________________ end main area ___________________ -->
@@ -346,6 +419,7 @@
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/common.js"></script>
     <!--  -->
+    <script src="assets/js/bootstrap-pincode-input.js"></script>
     <script src="assets/js/detail_profile.js"></script>
 </body>
 
