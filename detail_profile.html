@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKTGO - Survey</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- ___________________ start header area ___________________ -->
+    <!-- bottom menu -->
+    <header class="header_navArea">
+        <div class="container px-0">
+            <nav class="header_nav">
+                <a class="header_navLink" href="index.html">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <div class="header_navTitle">Home</div>
+                </a>
+                <a class="header_navLink" href="survey.html">
+                    <i class="fa-solid fa-print"></i>
+                    <div class="header_navTitle">Survey</div>
+                </a>
+                <a class="header_navLink" href="my_order.html">
+                    <i class="fa-solid fa-receipt"></i>
+                    <div class="header_navTitle">Transaction</div>
+                </a>
+                <a class="header_navLink active" href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="header_navTitle">Profile</div>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- top header -->
+    <div class="sticky_header sticky-top py-2 bg-white shadow_sm">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="pe-3 flex-grow-1">
+                    <h1 class="fs_20 mb-0">
+                        <a class="text-decoration-none" href="profile.html">Detail Profile</a>
+                    </h1>
+                </div>
+                <div>
+                    <!-- <a class="top_btn position-relative shadow-none border-0 disabled opacity-0">
+                        <i class="fa-solid fa-clock-rotate-left icon_normal me-2"></i> History
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ___________________ start header area ___________________ -->
+
+    <!-- ___________________ start main area ___________________ -->
+    <main class="main main_pb">
+
+        <!-- ... profile detail section ... -->
+        <section>
+            <div class="container py-2 px-3">
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Label</div>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control inp_underline fs_14" name="label" type="text" placeholder="Ex. House">
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">City &amp; Sub-districts</div>
+                    </div>
+                    <div class="col-8">
+                        <input id="inp__cityAndDistricts" class="form-control inp_underline fs_14" name="cityAndDistricts" type="text" placeholder="City &amp; Sub-districts">
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Postal Code</div>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control inp_underline fs_14" name="postalCode" type="text" placeholder="Postal Code">
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
+                    </div>
+                    <div class="col-8">
+                        <textarea class="form-control inp_underline fs_14" name="address" placeholder="Street and house number"></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... survey form success modal ... -->
+        <div class="modal fade modal__bottom" id="formSuccessModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body p-4 overflow-x-hidden text-center">
+                        <img class="img-fluid mb-2" style="width: 160px;" src="assets/img/survey/victory.svg" alt="delivery">
+                        <h3 class="fs_18">
+                            Congratulation!
+                        </h3>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem...
+                        </p>
+                    </div>
+                    <div class="modal-footer py-2 px_20 border-top-0">
+                        <div class="w-100 m-0">
+                            <div class="row gx-3">
+                                <div class="col-12">
+                                    <a class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" href="survey.html">Okay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ... add address form modal ... -->
+        <form id="addAddressForm" action="#">
+            <div class="modal fade modal__bottom" id="addAddressModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header px-4 border-0">
+                            <h5 class="modal-title fs_20 c_secondary">Add Address</h5>
+                            <button type="reset" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-4 pt-2 overflow-x-hidden">
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Label</div>
+                                </div>
+                                <div class="col-8">
+                                    <input class="form-control inp_underline fs_14" name="label" type="text" placeholder="Ex. House">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">City & Sub-districts</div>
+                                </div>
+                                <div class="col-8">
+                                    <input id="inp__cityAndDistricts" class="form-control inp_underline fs_14" name="cityAndDistricts" type="text" placeholder="City & Sub-districts">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Postal Code</div>
+                                </div>
+                                <div class="col-8">
+                                    <input class="form-control inp_underline fs_14" name="postalCode" type="text" placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
+                                </div>
+                                <div class="col-8">
+                                    <textarea class="form-control inp_underline fs_14" name="address" placeholder="Street and house number"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer py-2 px_20 border-top-0">
+                            <div class="w-100 m-0">
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- city and district search box -->
+        <div class="offcanvas offcanvas-bottom search_offcanvas" tabindex="-1" id="citySearchOffCanvas" aria-labelledby="citySearchOffCanvasLabel">
+            <div class="offcanvas-header px-0 py-2">
+                <div class="container">
+                    <div class="d-flex justify-content-between gap-2 pt-2 mb-3">
+                        <h3 class="fs_20 pt-1 mb-0">City & Sub-districts</h3>
+                        <div class="pe-2">
+                            <button type="button" class="btn-close rounded-pill" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="search_inpWrap">
+                            <input id="city__searchInput" class="form-control search_input" type="text" placeholder="Search city & Sub-districts" autocomplete="off">
+                            <span class="search_resetBtn c_gray"><i class="fa-solid fa-circle-xmark icon_normal"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-body p-0 hide_scrollbar">
+                <div class="container">
+                    <ul id="city__searchResult" class="search_result location_searchResult">
+                        <li class="search_item">
+                            Kota Surabaya, Asemrowo
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Dukuh Pakis
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bulak
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Gubeng
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bubutan
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Benowo
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ___________________ end main area ___________________ -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/additional-methods.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/common.js"></script>
+    <!--  -->
+    <script src="assets/js/survey_form.js"></script>
+</body>
+
+</html>

@@ -27,7 +27,7 @@
                     <i class="fa-solid fa-print"></i>
                     <div class="header_navTitle">Survey</div>
                 </a>
-                <a class="header_navLink" href="transaction.html">
+                <a class="header_navLink" href="my_order.html">
                     <i class="fa-solid fa-receipt"></i>
                     <div class="header_navTitle">Transaction</div>
                 </a>
@@ -40,7 +40,7 @@
     </header>
 
     <!-- top header -->
-    <div class="sticky-top py-2 bg-white shadow_sm">
+    <div class="sticky_header sticky-top py-2 bg-white shadow_sm">
         <div class="container">
             <div class="d-flex align-items-center">
                 <div class="pe-3 flex-grow-1">
@@ -61,6 +61,7 @@
     <!-- ___________________ start main area ___________________ -->
     <main class="main main_pb bg_light3 pt-2">
 
+        <!-- ... survey list ... -->
         <section>
             <div class="container px-3">
                 <div class="survey_item">
@@ -182,7 +183,6 @@
                 </div>
             </div>
         </section>
-         
 
         <!-- ... history modal ... --> 
         <div class="offcanvas offcanvas-end w-100" data-bs-backdrop="static" tabindex="-1" id="history_offcanvas">
@@ -368,6 +368,139 @@
                             </div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ... address alert modal ... -->
+        <div class="modal fade modal__bottom" id="addressAlertModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body p-4 overflow-x-hidden text-center">
+                        <img class="img-fluid mb-2" style="width: 160px;" src="assets/img/survey/delivery.svg" alt="delivery">
+                        <h3 class="fs_18">
+                            Oops.. You haven't added an address yet
+                        </h3>
+                        <p class="mb-0">
+                            To take the survey, you must add your address which is used to send the prize if you are selected
+                        </p>
+                    </div>
+                    <div class="modal-footer py-2 px_20 border-top-0">
+                        <div class="w-100 m-0">
+                            <div class="row gx-3">
+                                <div class="col-6">
+                                    <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="button" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#addAddressModal">Add Address</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ... add address form modal ... -->
+        <form id="addAddressForm" action="#">
+            <div class="modal fade modal__bottom" id="addAddressModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header px-4 border-0">
+                            <h5 class="modal-title fs_20 c_secondary">Add Address</h5>
+                            <button type="reset" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-4 pt-2 overflow-x-hidden">
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Label</div>
+                                </div>
+                                <div class="col-8">
+                                    <input class="form-control inp_underline fs_14" name="label" type="text" placeholder="Ex. House">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">City & Sub-districts</div>
+                                </div>
+                                <div class="col-8">
+                                    <input id="inp__cityAndDistricts" class="form-control inp_underline fs_14" name="cityAndDistricts" type="text" placeholder="City & Sub-districts">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Postal Code</div>
+                                </div>
+                                <div class="col-8">
+                                    <input class="form-control inp_underline fs_14" name="postalCode" type="text" placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-2">
+                                <div class="col-4">
+                                    <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
+                                </div>
+                                <div class="col-8">
+                                    <textarea class="form-control inp_underline fs_14" name="address" placeholder="Street and house number"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer py-2 px_20 border-top-0">
+                            <div class="w-100 m-0">
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- city and district search box -->
+        <div class="offcanvas offcanvas-bottom search_offcanvas" tabindex="-1" id="citySearchOffCanvas" aria-labelledby="citySearchOffCanvasLabel">
+            <div class="offcanvas-header px-0 py-2">
+                <div class="container">
+                    <div class="d-flex justify-content-between gap-2 pt-2 mb-3">
+                        <h3 class="fs_20 pt-1 mb-0">City & Sub-districts</h3>
+                        <div class="pe-2">
+                            <button type="button" class="btn-close rounded-pill" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="search_inpWrap">
+                            <input id="city__searchInput" class="form-control search_input" type="text" placeholder="Search city & Sub-districts" autocomplete="off">
+                            <span class="search_resetBtn c_gray"><i class="fa-solid fa-circle-xmark icon_normal"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-body p-0 hide_scrollbar">
+                <div class="container">
+                    <ul id="city__searchResult" class="search_result location_searchResult">
+                        <li class="search_item">
+                            Kota Surabaya, Asemrowo
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Dukuh Pakis
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bulak
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Gubeng
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bubutan
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Benowo
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

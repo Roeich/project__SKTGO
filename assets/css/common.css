@@ -148,7 +148,7 @@ i.fa-brands{
 }
 i.fa-solid.icon_normal,
 i.fa-brands.icon_normal{
-    color: var(--c_dark);
+    color: inherit;
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: none;
     text-shadow: none;
@@ -755,6 +755,9 @@ i.fa-brands.icon_normal{
 }
 .header_navArea ~ .main{
     padding-bottom: 68px;
+}
+.sticky_header>.container>.d-flex{
+    min-height: 48px;
 }
 .main_py {
     padding: 56px 0px 68px 0px;
