@@ -23,6 +23,8 @@ $(document).ready(function(){
         // send phone otp
         
         // show modal
+        $("#phoneOtpInputStep").show();
+        $("#phoneInputStep").hide();
         $("#changePhoneNumberModal").modal("show");
     });
 
@@ -119,6 +121,8 @@ $(document).ready(function(){
         // send phone otp
         
         // show modal
+        $("#emailOtpInputStep").show();
+        $("#emailInputStep").hide();
         $("#changeEmailFormModal").modal("show");
     });
 
@@ -177,7 +181,7 @@ $(document).ready(function(){
         },
         submitHandler: function (form) {
             $("#emailPreview").html(form.email.value);
-            $("#changeEmailModal").modal("hide"); 
+            $("#changeEmailFormModal").modal("hide"); 
         }
     });
     
