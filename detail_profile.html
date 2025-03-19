@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -66,26 +67,58 @@
             <div class="container py-2 px-3">
                 <div class="row gx-3 mb-2">
                     <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Label</div>
+                        <div class="fs_14 c_secondary inp_underlineLabel">Username</div>
                     </div>
                     <div class="col-8">
-                        <input class="form-control inp_underline fs_14" name="label" type="text" placeholder="Ex. House">
+                        <input class="form-control inp_underline fs_14" name="username" type="text" placeholder="Username" value="Mimin JKTGO in The Sky">
                     </div>
                 </div>
                 <div class="row gx-3 mb-2">
                     <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">City &amp; Sub-districts</div>
+                        <div class="fs_14 c_secondary inp_underlineLabel">Fullname</div>
                     </div>
                     <div class="col-8">
-                        <input id="inp__cityAndDistricts" class="form-control inp_underline fs_14" name="cityAndDistricts" type="text" placeholder="City &amp; Sub-districts">
+                        <input class="form-control inp_underline fs_14" name="fullname" type="text" placeholder="Fullname" value="Jole Kyle La Rise">
                     </div>
                 </div>
                 <div class="row gx-3 mb-2">
                     <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Postal Code</div>
+                        <div class="fs_14 c_secondary inp_underlineLabel">Phone</div>
                     </div>
                     <div class="col-8">
-                        <input class="form-control inp_underline fs_14" name="postalCode" type="text" placeholder="Postal Code">
+                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
+                            <div class="phoneNumberPreview">
+                                085632829323
+                            </div>
+                            <input class="d-none" name="phone" type="tel" value="085632829323">
+                            <div>
+                                <button id="changePhoneNumberBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Email</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
+                            <div>
+                                jolego@gmail.com
+                            </div>
+                            <input class="d-none" name="email" type="email" value="jolego@gmail.com">
+                            <div>
+                                <button class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">DOB</div>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control inp_underline fs_14" id="dob" name="dob" type="text" placeholder="Date of Birth" value="14-06-1997">
                     </div>
                 </div>
                 <div class="row gx-3 mb-2">
@@ -93,8 +126,36 @@
                         <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
                     </div>
                     <div class="col-8">
-                        <textarea class="form-control inp_underline fs_14" name="address" placeholder="Street and house number"></textarea>
+                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center gap-2 cursor_pointer" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                            <div id="addressPreview">
+                                Add Address
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Domicile</div>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control inp_underline fs_14" name="domicile" type="text" placeholder="Domicile" value="Jakarta Selatan">
+                    </div>
+                </div>
+                <div class="row gx-3 mb-2">
+                    <div class="col-4">
+                        <div class="fs_14 c_secondary inp_underlineLabel">Gender</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="pt-2">
+                            <select class="form-control select2default" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5 pb-3 text-end">
+                    <button class="btn btn_shadow btn_primary rounded-pill w-100" type="button">Update Profile</button>
                 </div>
             </div>
         </section>
@@ -124,6 +185,48 @@
                 </div>
             </div>
         </div>
+
+        <!-- ... Change Phone Number form modal ... -->
+        <form id="changePhoneNumberForm" action="#">
+            <div class="modal fade modal__bottom show d-block" id="changePhoneNumberModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header px-4 border-0">
+                            <h5 class="modal-title fs_20 c_secondary">Change Phone Number</h5>
+                            <button type="reset" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-4 pt-2 overflow-x-hidden">
+                            <div>
+                                <div class="mb-3">
+                                    Input new phone number
+                                </div>
+                                <div class="d-flex gap-4">
+                                    <div class="fs_18 pt-3">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <input class="form-control inp_underline fs_14" name="phone" type="tel" placeholder="Ex 0812 **** ****">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer py-2 px_20 border-top-0">
+                            <div class="w-100 m-0">
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+       
 
         <!-- ... add address form modal ... -->
         <form id="addAddressForm" action="#">
@@ -184,7 +287,6 @@
                 </div>
             </div>
         </form>
-
         <!-- city and district search box -->
         <div class="offcanvas offcanvas-bottom search_offcanvas" tabindex="-1" id="citySearchOffCanvas" aria-labelledby="citySearchOffCanvasLabel">
             <div class="offcanvas-header px-0 py-2">
@@ -228,6 +330,8 @@
                 </div>
             </div>
         </div>
+
+        
     </main>
     <!-- ___________________ end main area ___________________ -->
 
@@ -242,7 +346,7 @@
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/common.js"></script>
     <!--  -->
-    <script src="assets/js/survey_form.js"></script>
+    <script src="assets/js/detail_profile.js"></script>
 </body>
 
 </html>

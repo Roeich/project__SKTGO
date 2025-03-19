@@ -73,7 +73,7 @@ $(document).ready(function(){
                 });
                 form.submit();
             */
-            $("#addAddressForm").modal("hide");
+            $("#addAddressModal").modal("hide");
             window.location.href=tempLink;
         }
     });

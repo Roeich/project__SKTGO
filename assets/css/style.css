@@ -1409,6 +1409,10 @@ span.error:not(input) {
 .survey_questionItem .check_inpDef{
     margin-top: 0.13em;
 }
-
-
 /* .............. end survey form page .............. */
+
+/* .............. start profile detail page .............. */
+.cursor_pointer{
+    cursor: pointer;
+}
+/* .............. end profile detail page .............. */

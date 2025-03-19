@@ -807,4 +807,8 @@ i.fa-brands.icon_normal{
     padding-left: 30px;
     padding-right: 30px;
 }
+.py_2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+}
 /* ================ end login page =============== */

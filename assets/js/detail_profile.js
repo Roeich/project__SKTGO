@@ -1,74 +1,101 @@
 $(document).ready(function(){
-    // control survey form
-    const totalQuestions=$(".survey_questionItem").length;
-    $(".survey_formInp,.survey_formImgInp").change(function () {
-        var selectedFile = $(".survey_formImgInp").val()
-        var checkedCount = $(".survey_formInp:checked").length;
-        if(selectedFile){
-            checkedCount+=1;
-        }
-        $("#answer_count").text(checkedCount);
-        $("#answer_progressBar").css({ width: (checkedCount*100/totalQuestions)+"%" });
-
-        if(totalQuestions===checkedCount){
-            $('#error_message').addClass('d-none');
+    
+    /* ---------------- start detail profile form ---------------- */
+    // date picker
+    $("#dob").flatpickr({
+        enableTime: false,    
+        defaultDate:$("#dob").val(), 
+        dateFormat: "d-m-Y", 
+        altInput: true,
+        altFormat: "d F Y",
+        onChange: function (selectedDates, dateStr, instance) {
+            // console.log("Selected Date:", dateStr);
         }
     });
-    $(".img__inpLabel input[type='file']").change(function(){
-        var inpLabelText=$(this).parents(".img__inpLabel").find("span");
-        var files = $(this).prop("files");
-
-        if (files.length > 0) {
-            var fileName = files[0].name;
-            $(inpLabelText).text(fileName);
-        } else {
-            $(inpLabelText).text("");
-        }
+    // select2js 
+    $(".select2default").select2({
+        minimumResultsForSearch: Infinity
     });
-    $(".survey_imgSlider").owlCarousel({
-        items:1,
-        loop:true,
-        nav:false,
-        dots:true,
-        autoplay: true,
-        autoplayTimeout: 4000
-    });
+    /* ---------------- end detail profile form ---------------- */
 
-    // validating survey form 
-    $('#survey_submit_btn').click(function() {
-        // Check if all input fields are not empty
-        let allInputsFilled = true;
-        $('.survey_formImgInp').each(function() {
-            if (!$(this).val()) {
-                allInputsFilled = false;
-                return false;
+    /* ---------------- start change phone form ---------------- */
+    $("#changePhoneNumberBtn").click(function(){
+        // send otp
+
+        // show modal
+        $("#changePhoneNumberModal").modal("show");
+    });
+    // otp and phone validate form
+    $('#addAddressForm').validate({
+        rules: {
+            label: {
+                required: true,
+                minlength: 2
+            },
+            cityAndDistricts: {
+                required: true
+            },
+            postalCode: {
+                required: true,
+                digits: true,
+                minlength: 5,
+                maxlength: 5
+            },
+            address: {
+                required: true,
+                minlength: 5
             }
-        });
-
-        // Check if at least one radio button is checked in each group
-        let allRadioGroupsChecked = true;
-        $('.survey_questionItem').each((ind,elm)=> {
-            const groupName = $(elm).find('input[type="radio"]').attr('name');
-            if(groupName){
-                if (!$(`input[name="${groupName}"]:checked`).length) {
-                    allRadioGroupsChecked = false;
-                    return false;
-                }
+        },
+        messages: {
+            label: {
+                required: "Please enter a label.",
+                minlength: "The label must be at least 2 characters."
+            },
+            cityAndDistricts: {
+                required: "Please enter City & Districts."
+            },
+            postalCode: {
+                required: "Please enter a postal code.",
+                digits: "The postal code must be numeric.",
+                minlength: "The postal code must be exactly 5 digits.",
+                maxlength: "The postal code must be exactly 5 digits."
+            },
+            address: {
+                required: "Please enter a complete address.",
+                minlength: "The address must be at least 5 characters."
             }
-        });
-        if (allInputsFilled && allRadioGroupsChecked) {
-            // Submit the form
-            $('#error_message').addClass('d-none');
-            $('#formSuccessModal').modal("show");
-            // $('#survey_form').submit();
-        } else {
-            // Show an error message
-            $('#error_message').removeClass('d-none');
+        },
+        errorElement: 'div',
+        submitHandler: function (form) {
+            /*
+                $.ajax({
+                    url: "your-server-endpoint-url",
+                    method: "POST",
+                    data: $(form).serialize(), // Serialize the form data
+                    success: function(response) {
+                    console.log("Form submitted successfully.");
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+                    console.error("Form submission failed:", errorThrown);
+                    }
+                });
+                form.submit();
+            */
+
+            // if success
+            let previewAddressHtml=`
+                ${form.label.value} <br>
+                <span class="fw-normal">
+                ${form.inp__cityAndDistricts.value} (${form.postalCode.value}) , ${form.address.value}
+                </span>
+            `;
+            $("#addressPreview").html(previewAddressHtml);
+            $("#addAddressModal").modal("hide");
         }
     });
+    /* ---------------- end change phone form ---------------- */
 
-
-    /* ---------------- inner address add ----------------- */
+    /* ---------------- start add address form ---------------- */
     // address form validation
     $('#addAddressForm').validate({
         rules: {
@@ -125,6 +152,15 @@ $(document).ready(function(){
                 });
                 form.submit();
             */
+
+            // if success
+            let previewAddressHtml=`
+                ${form.label.value} <br>
+                <span class="fw-normal">
+                ${form.inp__cityAndDistricts.value} (${form.postalCode.value}) , ${form.address.value}
+                </span>
+            `;
+            $("#addressPreview").html(previewAddressHtml);
             $("#addAddressModal").modal("hide");
         }
     });
@@ -132,6 +168,7 @@ $(document).ready(function(){
     // city search offcanvas
     var citySearchOffCanvas = new bootstrap.Offcanvas($("#citySearchOffCanvas")[0]);
     $("#inp__cityAndDistricts").on("focus",function(){
+        console.log("demo");
         $("#addAddressModal").modal("hide");
         citySearchOffCanvas.show();
         setTimeout(()=>{
@@ -166,8 +203,7 @@ $(document).ready(function(){
         $("#inp__cityAndDistricts").val(searchValue);
         citySearchOffCanvas.hide();
         $("#addAddressModal").modal("show");
-    })
-
+    });
 
     // search reset button
     function toggleResetButton(input) {
@@ -186,5 +222,8 @@ $(document).ready(function(){
         $(".search_result").html("");
         $(this).hide();
     });
+
+    /* ---------------- end add address form ---------------- */
+    
     
 })
