@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
 
     // announce modal open
-    // $("#announceModal").modal("show");
+    $("#announceModal").modal("show");
 
     /* ----------------- end home page ----------------- */
 })

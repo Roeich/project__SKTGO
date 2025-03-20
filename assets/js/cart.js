@@ -1,4 +1,31 @@
 $(document).ready(function(){
+    // select all 
+    $("#selectAll").on("change", function() {
+        let isChecked = $(this).is(":checked");
+        $(".prd__item:not(.sold__out) .form-check-input").each(function() {
+            $(this).prop("checked", isChecked);
+            reCalculatePrice();
+        });
+    });
+
+    // delect item
+    let productItem, productId;
+    function deleteItem(item,itemId){
+        productItem=$(item).parents(".prd__item");
+        productId=itemId;
+        $("#deleteConfirmModal").modal("show");
+    }
+    function confirmDeleteItem(){
+        productItem.remove();
+        // productId (for backend)
+        $("#deleteConfirmModal").modal("hide");
+
+    }
+    window.deleteItem=deleteItem;
+    window.confirmDeleteItem=confirmDeleteItem;
+
+
+    
     // increase and decrease input number 
     $('.increase').click(function() {
         var input = $(this).siblings('.num_inp');

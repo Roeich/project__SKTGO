@@ -46,8 +46,18 @@
         <!-- start voucher details section -->
         <section>
             <form id="cartForm" action="#" autocomplete="off">
+
+                <div class="sticky-top top_62 d-flex justify-content-between gap-3 p-3 bg-white border-top border-bottom mb-2">
+                    <h2 class="fs_18 mb-0">Product List</h2>
+                    <div>
+                        Select All
+                        <input id="selectAll" class="form-check-input fs_18 mt-0 ms-2" type="checkbox">
+                    </div>
+                </div>
+
                 <!-- voucher list -->
                 <div class="mb-5">
+                    <!-- item -->
                     <div class="prd__item py-2 px-3 bg-white shadow-sm mt-2">
                         <div class="d-flex justify-content-between gap-2 mb-2">
                             <div class="c_gray fs_10 ">
@@ -83,7 +93,8 @@
                             <div class="pe-2">
                                 <div><span class="fs_14 fw-bold" data-current-price="125.000">Rp 125.000</span><span class="fs_12 c_gray text-decoration-line-through" data-actual-price="500.000">Rp 500.000</span> <span class="fs_8 badge bg_danger rounded-pill">74%</span></div>
                             </div>
-                            <div>
+                            <div class="d-flex gap-3">
+                                <button class="btn border py-1 px-2" type="button" onclick="deleteItem(this,1)"><i class="fa-solid fa-trash-can icon_normal c_danger"></i></button>
                                 <div class="form-group num_inpGrp">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm decrease" type="button">-</button>
                                     <input class="num_inp quantity" type="number" name="quantity[]" min="1" value="1">
@@ -92,6 +103,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- item -->
                     <div class="prd__item py-2 px-3 bg-white shadow-sm mt-2">
                         <div class="d-flex justify-content-between gap-2 mb-2">
                             <div class="c_gray fs_10 ">
@@ -126,9 +139,9 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="pe-2">
                                 <div><span class="fs_14 fw-bold" data-current-price="150.000">Rp 150.000</span></div>
-                                
                             </div>
-                            <div>
+                            <div class="d-flex gap-3">
+                                <button class="btn border py-1 px-2" type="button" onclick="deleteItem(this,2)"><i class="fa-solid fa-trash-can icon_normal c_danger"></i></button>
                                 <div class="form-group num_inpGrp">
                                     <button class="btn btn_shadow btn_primary rounded-pill btn_xsm decrease" type="button">-</button>
                                     <input class="num_inp quantity" type="number" name="quantity[]" min="1" value="1">
@@ -137,6 +150,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- item -->
                     <div class="prd__item py-2 px-3 bg-white shadow-sm mt-2 sold__out">
                         <div class="d-flex justify-content-between gap-2 mb-2">
                             <div class="c_gray fs_10 ">
@@ -171,16 +186,14 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="pe-2">
                                 <div><span class="fs_14 fw-bold" data-current-price="150.000">Rp 150.000</span></div>
-                                
                             </div>
-                            <div>
+                            <div class="d-flex gap-3">
                                 <b class="c_danger">Sold Out</b>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-    
+
                 <!-- payment method modal -->
                 <div class="modal fade modal__bottom" id="paymentMethod_modal" tabindex="-1">
                     <div class="modal-dialog">
@@ -379,6 +392,34 @@
                     </div>
                 </div>
             </form>
+
+            <!-- ...  delete confirm modal ... -->
+            <div class="modal fade modal__bottom" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body p-4 overflow-x-hidden text-center">
+                            <div class="fs_40 c_danger mb-3">
+                                <i class="fa-solid fa-triangle-exclamation icon_normal"></i>
+                            </div>
+                            <p class="fs_16 mb-0">
+                                Are you sure you want to remove this item ?
+                            </p>
+                        </div>
+                        <div class="modal-footer py-2 px_20 border-top-0">
+                            <div class="w-100 m-0">
+                                <div class="row gx-3">
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn-dark rounded-pill w-100" type="reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" type="button" onclick="confirmDeleteItem()">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- end voucher details section -->
 
