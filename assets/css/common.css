@@ -248,11 +248,13 @@ i.fa-brands.icon_normal{
     width: 100%;
 }
 .inp_shadow{
-    box-shadow: 3px 3px 0px var(--c_black);
+    -webkit-box-shadow: 3px 3px 0px var(--c_black);
+            box-shadow: 3px 3px 0px var(--c_black);
 }
 .inp_shadow:focus{
     border-color: var(--c_black);
-    box-shadow: 3px 3px 0px var(--c_primary) !important;
+    -webkit-box-shadow: 3px 3px 0px var(--c_primary) !important;
+            box-shadow: 3px 3px 0px var(--c_primary) !important;
 }
 .comment-input{
     min-height: 46px !important;

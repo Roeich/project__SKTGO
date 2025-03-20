@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.decrease').click(function() {
         var input = $(this).siblings('.num_inp');
         var currentValue = parseInt(input.val());
-        if (currentValue > 0) {
+        if (currentValue > 1) {
             input.val(currentValue - 1);
             reCalculatePrice();
         }
