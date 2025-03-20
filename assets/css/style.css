@@ -1,3 +1,4 @@
+
 /* .............. start home page .............. */
 body {
     background-color: var(--bg_light3);
@@ -400,8 +401,8 @@ body {
     padding: 26px 14px 8px;
     gap: 6px;
     width: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#242424), to(#464646));
     background: -o-linear-gradient(left, #242424 0%, #464646 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#242424), to(#464646));
     background: linear-gradient(90deg, #242424 0%, #464646 100%);
     border-radius: 0px 0px 14px 14px;
     margin-top: -20px;
@@ -1603,5 +1604,12 @@ span.error:not(input) {
     border-bottom: 1px solid var(--c_gray);
     border-radius: 0rem;
     height: 36px;
+}
+.countdown__wrap,
+.show__countdown .resend__otp{
+    display: none;
+}
+.show__countdown .countdown__wrap{
+    display: inline;
 }
 /* .............. end profile detail page .............. */

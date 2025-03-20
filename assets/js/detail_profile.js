@@ -85,7 +85,7 @@ $(document).ready(function(){
             $("#domicile__searchInput").focus();
         },300);
     });
-    // city search input and select result
+    // domicile search input and select result
     $("#domicile__searchInput").on("input",function(){
         let searchInput=$(this).val().trim();
         let searchResult=[
@@ -123,8 +123,19 @@ $(document).ready(function(){
         $("#phoneOtpInputStep").show();
         $("#phoneInputStep").hide();
         $("#changePhoneNumberModal").modal("show");
+        startPhoneOtpResendCountdown();
     });
 
+    function startPhoneOtpResendCountdown() {
+        let endTime = new Date().getTime() + 60000; 
+        $("#changePhoneNumberModal").addClass("show__countdown");
+        $("#phoneOtpResendCountdown").countdown(endTime, function(event) {
+            $(this).html(event.strftime('<span>%M</span>:<span>%S</span>'));
+        }).on('finish.countdown', function() {
+            $("#changePhoneNumberModal").removeClass("show__countdown");
+        });
+    }
+    
     // phone otp check
     $("#phoneOtp").pincodeInput({
         hidedigits: false, 
@@ -221,7 +232,18 @@ $(document).ready(function(){
         $("#emailOtpInputStep").show();
         $("#emailInputStep").hide();
         $("#changeEmailFormModal").modal("show");
+        startEmailOtpResendCountdown();
     });
+
+    function startEmailOtpResendCountdown() {
+        let endTime = new Date().getTime() + 60000; 
+        $("#changeEmailFormModal").addClass("show__countdown");
+        $("#emailOtpResendCountdown").countdown(endTime, function(event) {
+            $(this).html(event.strftime('<span>%M</span>:<span>%S</span>'));
+        }).on('finish.countdown', function() {
+            $("#changeEmailFormModal").removeClass("show__countdown");
+        });
+    }
 
     // email otp check
     $("#emailOtp").pincodeInput({
