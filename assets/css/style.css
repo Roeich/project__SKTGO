@@ -1440,7 +1440,9 @@ span.error:not(input) {
 .select2default.inp_underline ~ .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 32px;
     padding-bottom: 4px;
-    font-weight: 500;
+    font-weight: 600;
+    padding-left: 0px;
+    color: var(--c_dark);
 }
 .select2default.inp_underline ~ .select2-container--default .select2-selection--single{
     border: none;

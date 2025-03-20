@@ -65,98 +65,145 @@
         <!-- ... profile detail section ... -->
         <section>
             <div class="container py-2 px-3">
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Username</div>
+                <form id="profileEditForm" action="#" autocomplete="off">
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Username</div>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control inp_underline fs_14" name="username" type="text" placeholder="Username" value="Mimin JKTGO in The Sky">
+                        </div>
                     </div>
-                    <div class="col-8">
-                        <input class="form-control inp_underline fs_14" name="username" type="text" placeholder="Username" value="Mimin JKTGO in The Sky">
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Fullname</div>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control inp_underline fs_14" name="fullname" type="text" placeholder="Fullname" value="Jole Kyle La Rise">
+                        </div>
                     </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Fullname</div>
-                    </div>
-                    <div class="col-8">
-                        <input class="form-control inp_underline fs_14" name="fullname" type="text" placeholder="Fullname" value="Jole Kyle La Rise">
-                    </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Phone</div>
-                    </div>
-                    <div class="col-8">
-                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
-                            <div id="phoneNumberPreview">
-                                085632829323
-                            </div>
-                            <div>
-                                <button id="changePhoneNumberBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Phone</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
+                                <div id="phoneNumberPreview">
+                                    085632829323
+                                </div>
+                                <div>
+                                    <button id="changePhoneNumberBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Email</div>
-                    </div>
-                    <div class="col-8">
-                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
-                            <div id="emailPreview">
-                                jolego@gmail.com
-                            </div>
-                            <div>
-                                <button id="changeEmailBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
-                            </div>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Email</div>
                         </div>
-                    </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">DOB</div>
-                    </div>
-                    <div class="col-8">
-                        <input class="form-control inp_underline fs_14" id="dob" name="dob" type="text" placeholder="Date of Birth" value="14-06-1997">
-                    </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
-                    </div>
-                    <div class="col-8">
-                        <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center gap-2 cursor_pointer" data-bs-toggle="modal" data-bs-target="#addAddressModal">
-                            <div id="addressPreview">
-                                Add Address
+                        <div class="col-8">
+                            <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center py_2 gap-2">
+                                <div id="emailPreview">
+                                    jolego@gmail.com
+                                </div>
+                                <div>
+                                    <button id="changeEmailBtn" class="btn btn_shadow btn_primary rounded-pill btn_xsm" type="button">Edit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Domicile</div>
-                    </div>
-                    <div class="col-8">
-                        <input class="form-control inp_underline fs_14" name="domicile" type="text" placeholder="Domicile" value="Jakarta Selatan">
-                    </div>
-                </div>
-                <div class="row gx-3 mb-2">
-                    <div class="col-4">
-                        <div class="fs_14 c_secondary inp_underlineLabel">Gender</div>
-                    </div>
-                    <div class="col-8">
-                        <div class="pt-2">
-                            <select class="form-control select2default inp_underline" name="gender">
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">DOB</div>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control inp_underline fs_14" id="dob" name="dob" type="text" placeholder="Date of Birth" value="14-06-1997">
                         </div>
                     </div>
-                </div>
-                <div class="pt-5 pb-3 text-end">
-                    <button class="btn btn_shadow btn_primary rounded-pill w-100" type="button">Update Profile</button>
-                </div>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Address</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-control inp_underline fs_14 d-flex justify-content-between align-items-center gap-2 cursor_pointer" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                <div id="addressPreview">
+                                    Add Address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Domicile</div>
+                        </div>
+                        <div class="col-8">
+                            <input id="domicile" class="form-control inp_underline fs_14" name="domicile" type="text" placeholder="Domicile" value="Jakarta Selatan">
+                        </div>
+                    </div>
+                    <div class="row gx-3 mb-2">
+                        <div class="col-4">
+                            <div class="fs_14 c_secondary inp_underlineLabel">Gender</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="pt-2">
+                                <select class="form-control select2default inp_underline" name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <div id="gender_err"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 pb-3 text-end">
+                        <button class="btn btn_shadow btn_primary rounded-pill w-100" type="submit">Update Profile</button>
+                    </div>
+                </form>
             </div>
         </section>
+        
+        <!-- domicile search box -->
+        <div class="offcanvas offcanvas-bottom search_offcanvas" tabindex="-1" id="domicileOffCanvas" aria-labelledby="citySearchOffCanvasLabel">
+            <div class="offcanvas-header px-0 py-2">
+                <div class="container">
+                    <div class="d-flex justify-content-between gap-2 pt-2 mb-3">
+                        <h3 class="fs_20 pt-1 mb-0">Domicile</h3>
+                        <div class="pe-2">
+                            <button type="button" class="btn-close rounded-pill" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="search_inpWrap">
+                            <input id="domicile__searchInput" class="form-control search_input" type="text" placeholder="Domisili" autocomplete="off">
+                            <span class="search_resetBtn c_gray"><i class="fa-solid fa-circle-xmark icon_normal"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-body p-0 hide_scrollbar">
+                <div class="container">
+                    <ul id="domicile__searchResult" class="search_result location_searchResult">
+                        <li class="search_item">
+                            Kota Surabaya, Asemrowo
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Dukuh Pakis
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bulak
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Gubeng
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Bubutan
+                        </li>
+                        <li class="search_item">
+                            Kota Surabaya, Benowo
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- ... Change Phone Number form modal ... -->
         <form id="changePhoneNumberForm" action="#" autocomplete="off">
@@ -383,9 +430,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-4 overflow-x-hidden text-center">
-                        <img class="img-fluid mb-2" style="width: 160px;" src="assets/img/survey/victory.svg" alt="delivery">
+                        <div class="fs_54 text-success text-center mb-1">
+                            <i class="fa-solid fa-circle-check icon_normal"></i>
+                        </div>
                         <h3 class="fs_18">
-                            Congratulation!
+                            Profile updated Successfully !
                         </h3>
                         <p class="mb-0">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem...
@@ -395,7 +444,7 @@
                         <div class="w-100 m-0">
                             <div class="row gx-3">
                                 <div class="col-12">
-                                    <a class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" href="survey.html">Okay</a>
+                                    <a class="btn btn_sm btn_shadow btn_primary rounded-pill w-100" href="profile.html">Okay</a>
                                 </div>
                             </div>
                         </div>

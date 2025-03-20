@@ -16,6 +16,103 @@ $(document).ready(function(){
     $(".select2default").select2({
         minimumResultsForSearch: Infinity
     });
+
+    // profile edit validate form
+    $("#profileEditForm").validate({
+        ignore: [],  
+        rules: {
+            username: {
+                required: true,
+                minlength: 3
+            },
+            fullname: {
+                required: true,
+                minlength: 3
+            },
+            dob: {
+                required: true,
+                date: false, // Disable jQuery date validation (since we are using a custom format)
+                pattern: /^\d{2}-\d{2}-\d{4}$/ // Custom regex for DD-MM-YYYY format
+            },
+            domicile: {
+                required: true
+            },
+            gender: {
+                required: true
+            }
+        },
+
+        messages: {
+            username: {
+                required: "Please enter a username",
+                minlength: "Username must be at least 3 characters"
+            },
+            fullname: {
+                required: "Please enter your full name",
+                minlength: "Full name must be at least 3 characters"
+            },
+            dob: {
+                required: "Please enter your date of birth",
+                pattern: "Date must be in DD-MM-YYYY format"
+            },
+            domicile: {
+                required: "Please enter your domicile"
+            },
+            gender: {
+                required: "Please select your gender"
+            }
+        },
+        errorElement: "div",
+        errorPlacement: function (error, element) {
+            if (element.attr("name") === "gender") {
+                $("#gender_err").html(error); 
+            } else {
+                error.addClass("text-danger");
+                element.closest("div").append(error); 
+            }
+        },
+        submitHandler: function (form) {
+            console.log(form);
+            $("#formSuccessModal").modal("show");
+        }
+    });
+
+    // domicile search offcanvas
+    var domicileOffCanvas = new bootstrap.Offcanvas($("#domicileOffCanvas")[0]);
+    $("#domicile").on("focus",function(){
+        domicileOffCanvas.show();
+        setTimeout(()=>{
+            $("#domicile__searchInput").focus();
+        },300);
+    });
+    // city search input and select result
+    $("#domicile__searchInput").on("input",function(){
+        let searchInput=$(this).val().trim();
+        let searchResult=[
+            "Kota Surabaya, Asemrowo",
+            "Kota Surabaya, Dukuh Pakis",
+            "Kota Surabaya, Bulak",
+            "Kota Surabaya, Gubeng"
+        ];
+
+        // generate html code
+        let resultHtml="";
+        for(let resultItem of searchResult){
+            resultHtml+=`
+                <li class="search_item">
+                    ${resultItem}
+                </li>
+            `;
+        }
+
+        $("#domicile__searchResult").html(resultHtml);
+    });
+    $("#domicile__searchResult").on("click",".search_item",function(){
+        var searchValue=$(this).text().trim();
+        $("#domicile").val(searchValue);
+        domicileOffCanvas.hide();
+    });
+    
     /* ---------------- end detail profile form ---------------- */
 
     /* ---------------- start change phone form ---------------- */
